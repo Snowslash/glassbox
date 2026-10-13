@@ -18,9 +18,25 @@ test('chooser is a real static entrypoint with all three direct lesson links',as
  assert.match(await text('vite.config.mjs'),/'lab.html'/);
  assert.match(view,/PublicEstateHeader/);assert.doesNotMatch(view,/fetch\(/);
 });
-test('each lesson retains direct navigation and a route back to all lessons',async()=>{
- for(const file of ['App.jsx','OxygenApp.jsx','RespiratoryApp.jsx']){
-  const source=await text('src/'+file);assert.match(source,/href="\.\.\/lab\.html">All lessons<\/a>/);
-  assert.match(source,/aria-label="Experiments"/);assert.match(source,/Project overview/);
- }
+for(const file of ['App.jsx','OxygenApp.jsx','RespiratoryApp.jsx']){
+ test(file+' has one project return above the title, not a bottom lesson directory',async()=>{
+  const source=await text('src/'+file);
+  assert.equal((source.match(/<ProjectNavigation\s*\/>/g)||[]).length,1);
+  assert.ok(source.indexOf('<ProjectNavigation')<source.indexOf('<EstatePageTitle'));
+  assert.doesNotMatch(source,/aria-label="Experiments"|>All lessons<|className="(?:oxygen-nav|resp-experiments)"/);
+  assert.match(source,/Model details/);assert.match(source,/Return to lesson/);
+ });
+ test(file+' starts with the question without decorative heading labels',async()=>{
+  const source=await text('src/'+file);
+  const title=source.indexOf('<EstatePageTitle'),end=source.indexOf('</EstatePageTitle>',title);
+  assert.doesNotMatch(source.slice(source.lastIndexOf('<EstateShell',title),title),/className="eyebrow"/);
+  assert.doesNotMatch(source.slice(end,source.indexOf('<nav',end)),/<p(?:>|\s)/);
+ });
+}
+test('project return is a native button-styled link to the overview',async()=>{
+ const source=await text('src/ProjectNavigation.jsx').catch(()=>'');
+ assert.match(source,/<nav[^>]*aria-label="Project"/);
+ assert.match(source,/<a[^>]*className="estate-primary-action"[^>]*href="\.\.\/"/);
+ assert.equal((source.match(/<a\s/g)||[]).length,1);
+ assert.match(source,/Project overview/);assert.doesNotMatch(source,/onClick|role="button"/);
 });

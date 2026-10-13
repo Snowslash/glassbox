@@ -1,4 +1,5 @@
 import React, {useEffect, useState, useRef} from 'react';
+import {ProjectNavigation} from './ProjectNavigation.jsx';
 import {PublicEstateHeader, EstateShell, EstatePageTitle, useEstateTheme} from '@sangeev/estate-ui';
 import {validateData, initialState, transition, selectFrame} from './model.mjs';
 import {formatValue} from './presentation.mjs';
@@ -48,8 +49,9 @@ export function App() {
   <a className="skip-link" href="#lesson">{modelPage?'Skip to model details':'Skip to lesson'}</a>
   <PublicEstateHeader navigation="projects" theme={theme} onToggleTheme={toggleTheme}/>
   <EstateShell as="main" variant="wide-app" id="lesson">
+   <ProjectNavigation/>
    <div className="lesson-heading">
-    <div id="page-heading" tabIndex="-1"><p className="eyebrow">Glassbox</p><EstatePageTitle variant="app">{modelPage?'Model details':'What happens to blood pressure during blood loss?'}</EstatePageTitle><p className="subhead">{modelPage?'Recorded model values, calculations and sources.':'Explore a recorded simulation.'}</p></div>
+    <div id="page-heading" tabIndex="-1"><EstatePageTitle variant="app">{modelPage?'Model details':'What happens to blood pressure during blood loss?'}</EstatePageTitle></div>
     <nav className="page-links" aria-label="Lesson and model details">
      {modelPage?<a id="return-to-lesson" href="./" onClick={e=>follow(e,'./')}>Return to lesson</a>:<>
       <a href="#about" onClick={() => {document.getElementById('about').open = true;}}>About this simulation</a>
@@ -61,7 +63,6 @@ export function App() {
     : !data ? <p role="status" className="load-state">Loading the recording…</p>
     : modelPage?<ModelDetails data={data} state={modelState} frame={selectFrame(data,modelState)} dispatch={a=>setModelState(s=>transition(s,a,data))}/>
     : <Lesson data={data} state={lessonState} setState={setLessonState} onModel={openModel}/>}
-   <nav className="page-links" aria-label="Experiments"><a href="../">Project overview</a><a href="../lab.html">All lessons</a><a href="./" aria-current="page">Pressure is not volume</a><a href="./oxygen.html">Saturation is not delivery</a><a href="./respiratory.html">Where does the breath go?</a></nav>
    {!modelPage&&<About/>}
   </EstateShell>
  </>;

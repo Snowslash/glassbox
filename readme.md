@@ -14,7 +14,7 @@ Follow the [setup guide](docs/development.md#run-locally) to run the lab on your
 
 Once it is open, select **Open lab** and choose any lesson. Make your prediction, then play the recording. Pause or move the timeline to compare measurements at the same point in the experiment.
 
-Each lesson has a **Model details** page explaining its assumptions and limitations. Use **All lessons** to return to the chooser.
+Each lesson has a **Model details** page explaining its assumptions and limitations. Use **Project overview** above the heading to return to the introduction, then **Open lab** to choose another experiment.
 
 The experiments use fictional scenarios recorded with the Pulse physiology simulator. The browser replays those results rather than running new simulations.
 

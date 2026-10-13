@@ -1,0 +1,2 @@
+.project-navigation{margin-bottom:var(--estate-space-4)}
+.project-navigation + :is(.lesson-heading,.resp-heading){padding-top:0}

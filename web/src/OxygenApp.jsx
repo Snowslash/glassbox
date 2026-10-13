@@ -1,4 +1,5 @@
 import React,{useEffect,useState} from 'react';
+import {ProjectNavigation} from './ProjectNavigation.jsx';
 import {PublicEstateHeader,EstateShell,EstatePageTitle,useEstateTheme} from '@sangeev/estate-ui';
 import {validateData,validateGate,approved,initialState,transition,selectFrame,fields,labels,units,display,figure,geometry,linePath,readRoute,modelHref} from './oxygen-model.mjs';
 import {sha256} from './oxygen-sha256.mjs';
@@ -20,9 +21,9 @@ export function OxygenApp(){
  const follow=(e,href)=>{if(e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;e.preventDefault();history.pushState(null,'',href);sync();scrollTo(0,0);};
  const frame=data?selectFrame(data,model?snapshot:state):null,href=data?modelHref(selectFrame(data,state),state):'./oxygen-model.html';
  return <><a className="skip-link" href="#oxygen-main">Skip to lesson</a><PublicEstateHeader navigation="projects" theme={theme} onToggleTheme={toggleTheme}/><EstateShell as="main" variant="wide-app" id="oxygen-main" className="oxygen-main">
- <div className="lesson-heading"><div><EstatePageTitle variant="app" tabIndex="-1">{model?'Oxygen model details':'Would less haemoglobin lower oxygen saturation?'}</EstatePageTitle><p className="subhead">{model?'Original samples, calculations and sources.':'Saturation is not delivery · A recorded experiment'}</p></div><nav className="page-links" aria-label="Lesson and model details">{model?<a id="oxygen-return" href="./oxygen.html" onClick={e=>follow(e,'./oxygen.html')}>Return to lesson</a>:<><a href="#oxygen-about" onClick={()=>document.getElementById('oxygen-about').open=true}>About this simulation</a><a id="oxygen-model-link" href={href} onClick={e=>follow(e,href)}>Model details</a></>}</nav></div>
+ <ProjectNavigation/>
+ <div className="lesson-heading"><div><EstatePageTitle variant="app" tabIndex="-1">{model?'Oxygen model details':'Would less haemoglobin lower oxygen saturation?'}</EstatePageTitle></div><nav className="page-links" aria-label="Lesson and model details">{model?<a id="oxygen-return" href="./oxygen.html" onClick={e=>follow(e,'./oxygen.html')}>Return to lesson</a>:<><a href="#oxygen-about" onClick={()=>document.getElementById('oxygen-about').open=true}>About this simulation</a><a id="oxygen-model-link" href={href} onClick={e=>follow(e,href)}>Model details</a></>}</nav></div>
  {error?<section role="alert" className="load-state"><h2>We couldn't load the recording</h2><p>No results are shown.</p><p>{error}</p><button onClick={()=>setAttempt(a=>a+1)}>Retry data</button></section>:!data?<p role="status">Loading the recording…</p>:model?<Model data={data} frame={frame}/>:<Lesson data={data} state={state} frame={frame} dispatch={dispatch}/>}
- <nav className="oxygen-nav" aria-label="Experiments"><a href="../">Project overview</a><a href="../lab.html">All lessons</a><a href="./">Pressure is not volume</a><a href="./oxygen.html" aria-current="page">Saturation is not delivery</a><a href="./respiratory.html">Where does the breath go?</a></nav>
  {!model&&<details id="oxygen-about" className="about"><summary>About this simulation</summary><p>This fictional Pulse recording uses an authored, one-shot reduction in haemoglobin mass after 60 seconds. You are replaying original samples, not running a live simulation.</p><p>The action also changes resistance baselines. It is not blood loss or an isolated haemoglobin-only experiment, and does not represent a literal instant onset of clinical anaemia. Natural fluid exchange continues.</p></details>}
  </EstateShell></>;
 }
