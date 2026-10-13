@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "approvalScope": "Bounded recorded guided lesson using this exact bundle; not mass-conservation or physiological validation",
+  "requiredCriteria": [
+    "Unchanged finite/admissible field, unit/algebra and exact pre-action match checks",
+    "Unchanged one-shot factor, resistance modifier, action-consumption and no-haemorrhage tests",
+    "No repeated Hb loss below the appropriate pre/post-action reference, with the same rtol 1e-6 and atol 1e-8; gains are recorded separately, not claimed to pass conservation",
+    "Exact fresh-process repeat and checkpoint continuation at unchanged rtol 1e-6 and atol 1e-8",
+    "No engine changes, altered samples or forced physiological outcomes"
+  ],
+  "observed": {
+    "anaemiaMaximumPostActionGain_g": 0.0005902470450109831,
+    "anaemiaMinimumPostActionDrift_g": 0.0,
+    "controlMaximumPost60sGain_g": 0.0004857049939346325,
+    "originalSymmetricFailureRows": 624,
+    "firstFailureStep": 17354
+  },
+  "sourceInspection": {
+    "commit": "5e29e5b13710a08cec90874be7d36ecb192ebcda",
+    "BloodChemistryModel.cpp:231-246": "HemoglobinContent sums vascular Hb-species masses after conversion to unbound-Hb equivalent; no concentration/volume substitution in the exported mass.",
+    "Saturation.cpp:737-902": "Blood-gas redistribution includes approximate balance corrections and thresholds. resultantTotalHgb_mM is computed before later species corrections and reused by its conservation diagnostics. This makes an exact global-invariance assumption unjustified; it does not prove the cause of the measured cumulative drift."
+  },
+  "decision": "Post-hoc criterion correction: no repeated loss, not symmetric constancy. Same rtol=1e-6 atol=1e-8; original FAIL remains non-gating. This is not a conservation test; the positive drift cause is unresolved.",
+  "unresolved": "Exact cumulative source of the small positive Hb-mass drift has not been instrumentally isolated. No red-cell-production, proven floating-point-cause or validated conservation claim.",
+  "historicalVerification": "All 722 playback samples matched original CSV rows. Fresh repeat was exact; all 9001 continuation rows met the unchanged restart tolerances. Raw native evidence is excluded.",
+  "publicDerivativeOfSHA256": "38720be2da0bd1dfbcc1d0783141e88664b2cc81e82b78cedbb9c77176831384",
+  "verifiedManifestSHA256": "2558fc2e98c8a3bdad9bea34f474f2021d38c1ed336f82d22e5d0d40eb7a2142",
+  "verifiedChecksSHA256": "dcd92ed3106d34946f50ffc7637e65cd0c3dc55171051b05d7bb109ad12d6fde",
+  "verifiedLessonSHA256": "0c364167254fdf541f9946756920a9bc79cd98f09f732bf8f01a520df5fe9cb3"
+}

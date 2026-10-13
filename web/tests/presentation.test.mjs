@@ -1,0 +1,12 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {chartGeometry,formatValue,validateGate,traceSemantics} from '../src/presentation.mjs';
+const read=f=>JSON.parse(readFileSync(new URL('../../evidence/engine/'+f,import.meta.url)));
+const d=read('lesson-data.json');
+test('each default trace has an explicit averaging convention',()=>{assert.equal(traceSemantics.MAP_mmHg,'Last completed-cycle mean');assert.equal(traceSemantics.strokeVolume_mL,'Last completed-cycle integral');assert.equal(traceSemantics.HR_per_min,'Heart-driver frequency');assert.equal(traceSemantics.bloodVolume_mL,'Net circulating volume');});
+test('build gate requires numerical and independent review pass',()=>{assert.equal(validateGate(read('checks.json'),read('review.json')),true);assert.throws(()=>validateGate({...read('checks.json'),numeric_status:'FAIL'},read('review.json')));assert.throws(()=>validateGate(read('checks.json'),{status:'FAIL'}));assert.throws(()=>validateGate({...read('checks.json'),repeat:{pass:false}},read('review.json')));});
+test('four chart scales bound original values, have actual units and bounded cursor',()=>{for(const key of d.defaultTraces){const g=chartGeometry(d,key,275,true);const values=['bleed','control'].flatMap(r=>d.runs[r].samples.map(s=>s[key]));assert.ok(g.min<=Math.min(...values));assert.ok(g.max>=Math.max(...values));assert.equal(g.cursor,310);assert.equal(g.bleed.split(' ').length,276);assert.equal(g.control.split(' ').length,276);assert.ok(g.max>g.min);}});
+test('control sample marker uses the same index and vertical scale',()=>{for(const field of d.defaultTraces){const g=chartGeometry(d,field,275,true);const expected=16+(g.max-d.runs.control.samples[275][field])/(g.max-g.min)*90;assert.equal(g.controlPointY,expected);assert.equal(chartGeometry(d,field,275,false).controlPointY,null);}});
+test('prediction geometry never reveals future rows',()=>{const g=chartGeometry(d,'MAP_mmHg',0,false,true);assert.equal(g.bleed.split(' ').length,1);assert.equal(g.control,'');});
+test('display precision readable; invalid values never shown as numeric',()=>{assert.equal(formatValue(95.298036,'MAP_mmHg'),'95.3');assert.equal(formatValue(5508.974,'bloodVolume_mL'),'5,509');assert.equal(formatValue(1.230554,'baroHeartRateScale'),'1.231');assert.throws(()=>formatValue(NaN,'MAP_mmHg'));});

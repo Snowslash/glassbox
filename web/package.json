@@ -1,0 +1,28 @@
+{
+  "name": "glassbox",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "build": "node scripts/prepare.mjs && vite build && node scripts/verify-build.mjs",
+    "preview": "vite preview --host 127.0.0.1 --port 4173 --strictPort"
+  },
+  "dependencies": {
+    "@sangeev/estate-ui": "file:vendor/sangeev-estate-ui-2.0.0-alpha.7.tgz",
+    "react": "19.2.7",
+    "react-dom": "19.2.7"
+  },
+  "devDependencies": {
+    "playwright": "1.58.0",
+    "vite": "8.1.4"
+  },
+  "description": "Recorded physiological experiments with linked observations and model explanations.",
+  "license": "MIT",
+  "keywords": [
+    "physiology",
+    "education",
+    "simulation",
+    "recorded-experiments"
+  ]
+}

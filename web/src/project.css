@@ -1,0 +1,63 @@
+/* Project composition only. Shared chrome, fonts, tokens and shells stay upstream. */
+.project-intro{padding:var(--estate-space-7) 0 var(--estate-space-8)}
+.project-intro .back-link{display:inline-flex;align-items:center;gap:.5rem;min-height:44px;margin-bottom:var(--estate-space-3);color:var(--muted-foreground);font-size:.875rem}
+.project-intro h1{margin:0 0 var(--estate-space-4)}
+.project-summary{max-width:38ch;margin:0 0 var(--estate-space-4);font-size:1.3rem;line-height:1.5}
+.project-lede{max-width:65ch;margin:0;color:var(--muted-foreground);line-height:1.65}
+.project-actions{display:flex;align-items:center;gap:var(--estate-space-3);margin-top:var(--estate-space-5)}
+.project-evidence{padding-top:var(--estate-space-5);border-top:1px solid var(--estate-shoal)}
+.project-evidence h2,.project-details h2{margin:0 0 var(--estate-space-5)}
+.project-evidence img{display:block;width:100%;height:auto}
+.project-details{padding-top:var(--estate-space-8)}
+.project-details dl{margin:0}
+.project-details dl>div{display:grid;grid-template-columns:minmax(10rem,1fr) 3fr;gap:var(--estate-space-5);padding:var(--estate-space-5) 0;border-bottom:1px solid var(--estate-shoal)}
+.project-details dt{font-weight:700}
+.project-details dt a,.project-footer a{display:inline-flex;align-items:center;min-height:44px}
+.project-details dd{max-width:66ch;margin:0;color:var(--muted-foreground);line-height:1.65}
+.project-footer{padding:var(--estate-space-6) 0}
+.lab-intro{padding:var(--estate-space-5) 0}
+.lab-intro .back-link{display:inline-flex;align-items:center;min-height:44px;margin-bottom:var(--estate-space-4);color:var(--muted-foreground)}
+.lab-intro h1{margin:0 0 var(--estate-space-4)}
+.lab-intro p,.lesson-row p{margin:0;max-width:65ch;color:var(--muted-foreground);line-height:1.65}
+.lesson-row{padding:var(--estate-space-5) 0;border-top:1px solid var(--estate-shoal)}
+.lesson-row h2{margin:0 0 var(--estate-space-2)}
+.lesson-link{display:inline-flex;align-items:center;gap:var(--estate-space-3);min-height:44px}
+.lesson-link span{flex-shrink:0}
+@media(max-width:760px){.project-intro{padding-top:var(--estate-space-4);padding-bottom:var(--estate-space-7)}.project-details dl>div{grid-template-columns:1fr;gap:var(--estate-space-2)}}
+
+/* Decorative motion stays on the project introduction and lesson chooser. */
+.action-arrow{display:inline-block;flex-shrink:0}
+@keyframes glassbox-enter{
+ from{opacity:0;transform:translateY(8px)}
+ to{opacity:1;transform:none}
+}
+@keyframes glassbox-evidence{
+ from{opacity:0}
+ to{opacity:1}
+}
+@media(prefers-reduced-motion:no-preference){
+ .project-intro>:not(.back-link),.lab-intro>:not(.back-link),.lesson-row{animation:glassbox-enter 360ms cubic-bezier(.2,.7,.2,1) both}
+ .project-summary,.lab-intro p{animation-delay:60ms}
+ .project-lede{animation-delay:100ms}
+ .project-actions{animation-delay:140ms}
+ .project-evidence{animation:glassbox-evidence 420ms ease-out 180ms both}
+ .lesson-row:nth-child(1){animation-delay:100ms}
+ .lesson-row:nth-child(2){animation-delay:160ms}
+ .lesson-row:nth-child(3){animation-delay:220ms}
+ .action-arrow,.lesson-link span{transition:transform 180ms ease-out}
+ .project-intro:focus-within>*,.lab-intro:focus-within>*,.lesson-row:focus-within{animation:none}
+ .project-actions a:focus-visible .action-arrow,.lesson-link:focus-visible span{transform:translateX(4px)}
+ @media(hover:hover) and (pointer:fine){
+  .project-actions a:hover .action-arrow,.lesson-link:hover span{transform:translateX(4px)}
+  .project-actions a:active .action-arrow,.lesson-link:active span{transform:translateX(2px)}
+ }
+}
+@media(prefers-reduced-motion:reduce){
+ .project-intro>*,.lab-intro>*,.lesson-row,.project-evidence{animation:none!important}
+ .action-arrow,.lesson-link span{transition:none!important;transform:none!important}
+}
+
+/* Keep skip navigation available without adding a permanent header row. */
+.skip-link{position:fixed;top:var(--estate-space-3);left:var(--estate-space-3);z-index:100;display:inline-flex;align-items:center;min-height:44px;max-width:calc(100vw - var(--estate-space-3) - var(--estate-space-3));padding:.5rem 1rem;border:2px solid var(--foreground);background:var(--card);color:var(--foreground);transition:none!important;transform:translateY(calc(-100% - var(--estate-space-3) - 4px))}
+.skip-link:focus{transform:none}
+

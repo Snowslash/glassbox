@@ -1,0 +1,2518 @@
+{
+  "gateStatus": "PASS",
+  "runCount": 7,
+  "rowCounts": {
+    "control": 6001,
+    "highR": 6001,
+    "lowC": 6001,
+    "repeat-highR": 6001,
+    "repeat-lowC": 6001,
+    "restore-highR": 3001,
+    "restore-lowC": 3001
+  },
+  "fieldCount": 45,
+  "checkCount": 90,
+  "checks": [
+    {
+      "name": "control:solver-alignment",
+      "passed": true,
+      "detail": {
+        "rows": 6001,
+        "firstTime_s": 0.0,
+        "lastTime_s": 119.99999999999326
+      }
+    },
+    {
+      "name": "control:finite",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "control:positive-physical-fields",
+      "passed": true,
+      "detail": [
+        "volume_L",
+        "leftAlveoli_L",
+        "rightAlveoli_L",
+        "leftPleural_L",
+        "rightPleural_L",
+        "leftLungC_L_cmH2O",
+        "rightLungC_L_cmH2O",
+        "leftChestC_L_cmH2O",
+        "rightChestC_L_cmH2O",
+        "upperR_cmH2O_s_L",
+        "leftR_cmH2O_s_L",
+        "rightR_cmH2O_s_L",
+        "leftDuctR_cmH2O_s_L",
+        "rightDuctR_cmH2O_s_L",
+        "LeftLungCompartment_L",
+        "RightLungCompartment_L"
+      ]
+    },
+    {
+      "name": "control:pure-resistance",
+      "passed": true,
+      "detail": {
+        "upper": 0.0,
+        "left": 1.3877787807814457e-17,
+        "right": 1.3877787807814457e-17,
+        "leftDuct": 1.3877787807814457e-17,
+        "rightDuct": 1.3877787807814457e-17
+      }
+    },
+    {
+      "name": "control:driver-node-system-consistency",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "control:matched-driver",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "control:runtime-log-review",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "control:resource-and-exit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "highR:solver-alignment",
+      "passed": true,
+      "detail": {
+        "rows": 6001,
+        "firstTime_s": 0.0,
+        "lastTime_s": 119.99999999999326
+      }
+    },
+    {
+      "name": "highR:finite",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "highR:positive-physical-fields",
+      "passed": true,
+      "detail": [
+        "volume_L",
+        "leftAlveoli_L",
+        "rightAlveoli_L",
+        "leftPleural_L",
+        "rightPleural_L",
+        "leftLungC_L_cmH2O",
+        "rightLungC_L_cmH2O",
+        "leftChestC_L_cmH2O",
+        "rightChestC_L_cmH2O",
+        "upperR_cmH2O_s_L",
+        "leftR_cmH2O_s_L",
+        "rightR_cmH2O_s_L",
+        "leftDuctR_cmH2O_s_L",
+        "rightDuctR_cmH2O_s_L",
+        "LeftLungCompartment_L",
+        "RightLungCompartment_L"
+      ]
+    },
+    {
+      "name": "highR:pure-resistance",
+      "passed": true,
+      "detail": {
+        "upper": 1.3109854381433239e-16,
+        "left": 5.551115123125783e-17,
+        "right": 5.551115123125783e-17,
+        "leftDuct": 1.3877787807814457e-17,
+        "rightDuct": 1.3877787807814457e-17
+      }
+    },
+    {
+      "name": "highR:driver-node-system-consistency",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "highR:matched-driver",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "highR:runtime-log-review",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "highR:resource-and-exit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lowC:solver-alignment",
+      "passed": true,
+      "detail": {
+        "rows": 6001,
+        "firstTime_s": 0.0,
+        "lastTime_s": 119.99999999999326
+      }
+    },
+    {
+      "name": "lowC:finite",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lowC:positive-physical-fields",
+      "passed": true,
+      "detail": [
+        "volume_L",
+        "leftAlveoli_L",
+        "rightAlveoli_L",
+        "leftPleural_L",
+        "rightPleural_L",
+        "leftLungC_L_cmH2O",
+        "rightLungC_L_cmH2O",
+        "leftChestC_L_cmH2O",
+        "rightChestC_L_cmH2O",
+        "upperR_cmH2O_s_L",
+        "leftR_cmH2O_s_L",
+        "rightR_cmH2O_s_L",
+        "leftDuctR_cmH2O_s_L",
+        "rightDuctR_cmH2O_s_L",
+        "LeftLungCompartment_L",
+        "RightLungCompartment_L"
+      ]
+    },
+    {
+      "name": "lowC:pure-resistance",
+      "passed": true,
+      "detail": {
+        "upper": 0.0,
+        "left": 2.7755575615628914e-17,
+        "right": 1.3877787807814457e-17,
+        "leftDuct": 1.3877787807814457e-17,
+        "rightDuct": 5.551115123125783e-17
+      }
+    },
+    {
+      "name": "lowC:driver-node-system-consistency",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lowC:matched-driver",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lowC:runtime-log-review",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "lowC:resource-and-exit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "repeat-highR:solver-alignment",
+      "passed": true,
+      "detail": {
+        "rows": 6001,
+        "firstTime_s": 0.0,
+        "lastTime_s": 119.99999999999326
+      }
+    },
+    {
+      "name": "repeat-highR:finite",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "repeat-highR:positive-physical-fields",
+      "passed": true,
+      "detail": [
+        "volume_L",
+        "leftAlveoli_L",
+        "rightAlveoli_L",
+        "leftPleural_L",
+        "rightPleural_L",
+        "leftLungC_L_cmH2O",
+        "rightLungC_L_cmH2O",
+        "leftChestC_L_cmH2O",
+        "rightChestC_L_cmH2O",
+        "upperR_cmH2O_s_L",
+        "leftR_cmH2O_s_L",
+        "rightR_cmH2O_s_L",
+        "leftDuctR_cmH2O_s_L",
+        "rightDuctR_cmH2O_s_L",
+        "LeftLungCompartment_L",
+        "RightLungCompartment_L"
+      ]
+    },
+    {
+      "name": "repeat-highR:pure-resistance",
+      "passed": true,
+      "detail": {
+        "upper": 1.3109854381433239e-16,
+        "left": 5.551115123125783e-17,
+        "right": 5.551115123125783e-17,
+        "leftDuct": 1.3877787807814457e-17,
+        "rightDuct": 1.3877787807814457e-17
+      }
+    },
+    {
+      "name": "repeat-highR:driver-node-system-consistency",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "repeat-highR:matched-driver",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "repeat-highR:runtime-log-review",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "repeat-highR:resource-and-exit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "repeat-lowC:solver-alignment",
+      "passed": true,
+      "detail": {
+        "rows": 6001,
+        "firstTime_s": 0.0,
+        "lastTime_s": 119.99999999999326
+      }
+    },
+    {
+      "name": "repeat-lowC:finite",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "repeat-lowC:positive-physical-fields",
+      "passed": true,
+      "detail": [
+        "volume_L",
+        "leftAlveoli_L",
+        "rightAlveoli_L",
+        "leftPleural_L",
+        "rightPleural_L",
+        "leftLungC_L_cmH2O",
+        "rightLungC_L_cmH2O",
+        "leftChestC_L_cmH2O",
+        "rightChestC_L_cmH2O",
+        "upperR_cmH2O_s_L",
+        "leftR_cmH2O_s_L",
+        "rightR_cmH2O_s_L",
+        "leftDuctR_cmH2O_s_L",
+        "rightDuctR_cmH2O_s_L",
+        "LeftLungCompartment_L",
+        "RightLungCompartment_L"
+      ]
+    },
+    {
+      "name": "repeat-lowC:pure-resistance",
+      "passed": true,
+      "detail": {
+        "upper": 0.0,
+        "left": 2.7755575615628914e-17,
+        "right": 1.3877787807814457e-17,
+        "leftDuct": 1.3877787807814457e-17,
+        "rightDuct": 5.551115123125783e-17
+      }
+    },
+    {
+      "name": "repeat-lowC:driver-node-system-consistency",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "repeat-lowC:matched-driver",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "repeat-lowC:runtime-log-review",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "repeat-lowC:resource-and-exit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "restore-highR:solver-alignment",
+      "passed": true,
+      "detail": {
+        "rows": 3001,
+        "firstTime_s": 60.00000000000378,
+        "lastTime_s": 119.99999999999326
+      }
+    },
+    {
+      "name": "restore-highR:finite",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "restore-highR:positive-physical-fields",
+      "passed": true,
+      "detail": [
+        "volume_L",
+        "leftAlveoli_L",
+        "rightAlveoli_L",
+        "leftPleural_L",
+        "rightPleural_L",
+        "leftLungC_L_cmH2O",
+        "rightLungC_L_cmH2O",
+        "leftChestC_L_cmH2O",
+        "rightChestC_L_cmH2O",
+        "upperR_cmH2O_s_L",
+        "leftR_cmH2O_s_L",
+        "rightR_cmH2O_s_L",
+        "leftDuctR_cmH2O_s_L",
+        "rightDuctR_cmH2O_s_L",
+        "LeftLungCompartment_L",
+        "RightLungCompartment_L"
+      ]
+    },
+    {
+      "name": "restore-highR:pure-resistance",
+      "passed": true,
+      "detail": {
+        "upper": 1.3109854381431479e-16,
+        "left": 5.551115123125783e-17,
+        "right": 5.551115123125783e-17,
+        "leftDuct": 6.938893903907228e-18,
+        "rightDuct": 6.938893903907228e-18
+      }
+    },
+    {
+      "name": "restore-highR:driver-node-system-consistency",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "restore-highR:matched-driver",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "restore-highR:runtime-log-review",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "restore-highR:resource-and-exit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "restore-lowC:solver-alignment",
+      "passed": true,
+      "detail": {
+        "rows": 3001,
+        "firstTime_s": 60.00000000000378,
+        "lastTime_s": 119.99999999999326
+      }
+    },
+    {
+      "name": "restore-lowC:finite",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "restore-lowC:positive-physical-fields",
+      "passed": true,
+      "detail": [
+        "volume_L",
+        "leftAlveoli_L",
+        "rightAlveoli_L",
+        "leftPleural_L",
+        "rightPleural_L",
+        "leftLungC_L_cmH2O",
+        "rightLungC_L_cmH2O",
+        "leftChestC_L_cmH2O",
+        "rightChestC_L_cmH2O",
+        "upperR_cmH2O_s_L",
+        "leftR_cmH2O_s_L",
+        "rightR_cmH2O_s_L",
+        "leftDuctR_cmH2O_s_L",
+        "rightDuctR_cmH2O_s_L",
+        "LeftLungCompartment_L",
+        "RightLungCompartment_L"
+      ]
+    },
+    {
+      "name": "restore-lowC:pure-resistance",
+      "passed": true,
+      "detail": {
+        "upper": 0.0,
+        "left": 6.938893903907228e-18,
+        "right": 6.938893903907228e-18,
+        "leftDuct": 6.938893903907228e-18,
+        "rightDuct": 6.938893903907228e-18
+      }
+    },
+    {
+      "name": "restore-lowC:driver-node-system-consistency",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "restore-lowC:matched-driver",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "restore-lowC:runtime-log-review",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "restore-lowC:resource-and-exit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "highR:pre-action-exact",
+      "passed": true,
+      "detail": {
+        "rows": 1501
+      }
+    },
+    {
+      "name": "highR:fresh-repeat",
+      "passed": true,
+      "detail": {
+        "passed": true,
+        "rows": 6001,
+        "numericFailures": 0,
+        "discreteFailures": [],
+        "worstByField": {
+          "time_s": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "driver_cmH2O": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "musclePressure_cmH2O": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "flow_L_s": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "volume_L": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftAlveoli_cmH2O": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftAlveoli_L": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightAlveoli_cmH2O": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightAlveoli_L": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftPleural_cmH2O": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftPleural_L": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightPleural_cmH2O": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightPleural_L": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "muscleNode_cmH2O": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "ambient_cmH2O": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftLungC_L_cmH2O": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightLungC_L_cmH2O": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftChestC_L_cmH2O": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightChestC_L_cmH2O": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "upperR_cmH2O_s_L": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "upperFlow_L_s": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "upperSource_cmH2O": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "upperTarget_cmH2O": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftR_cmH2O_s_L": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftFlow_L_s": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftSource_cmH2O": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftTarget_cmH2O": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightR_cmH2O_s_L": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightFlow_L_s": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightSource_cmH2O": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightTarget_cmH2O": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftDuctR_cmH2O_s_L": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftDuctFlow_L_s": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftDuctSource_cmH2O": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftDuctTarget_cmH2O": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightDuctR_cmH2O_s_L": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightDuctFlow_L_s": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightDuctSource_cmH2O": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightDuctTarget_cmH2O": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "LeftLungCompartment_L": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "LeftTransalveolar_cmH2O": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "RightLungCompartment_L": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "RightTransalveolar_cmH2O": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          }
+        }
+      }
+    },
+    {
+      "name": "highR:active-checkpoint-continuation",
+      "passed": true,
+      "detail": {
+        "passed": true,
+        "rows": 3001,
+        "numericFailures": 0,
+        "discreteFailures": [],
+        "worstByField": {
+          "time_s": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "driver_cmH2O": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "musclePressure_cmH2O": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "flow_L_s": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "volume_L": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftAlveoli_cmH2O": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftAlveoli_L": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightAlveoli_cmH2O": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightAlveoli_L": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftPleural_cmH2O": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftPleural_L": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightPleural_cmH2O": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightPleural_L": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "muscleNode_cmH2O": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "ambient_cmH2O": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftLungC_L_cmH2O": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightLungC_L_cmH2O": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftChestC_L_cmH2O": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightChestC_L_cmH2O": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "upperR_cmH2O_s_L": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "upperFlow_L_s": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "upperSource_cmH2O": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "upperTarget_cmH2O": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftR_cmH2O_s_L": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftFlow_L_s": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftSource_cmH2O": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftTarget_cmH2O": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightR_cmH2O_s_L": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightFlow_L_s": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightSource_cmH2O": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightTarget_cmH2O": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftDuctR_cmH2O_s_L": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftDuctFlow_L_s": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftDuctSource_cmH2O": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftDuctTarget_cmH2O": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightDuctR_cmH2O_s_L": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightDuctFlow_L_s": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightDuctSource_cmH2O": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightDuctTarget_cmH2O": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "LeftLungCompartment_L": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "LeftTransalveolar_cmH2O": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "RightLungCompartment_L": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "RightTransalveolar_cmH2O": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          }
+        }
+      }
+    },
+    {
+      "name": "lowC:pre-action-exact",
+      "passed": true,
+      "detail": {
+        "rows": 1501
+      }
+    },
+    {
+      "name": "lowC:fresh-repeat",
+      "passed": true,
+      "detail": {
+        "passed": true,
+        "rows": 6001,
+        "numericFailures": 0,
+        "discreteFailures": [],
+        "worstByField": {
+          "time_s": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "driver_cmH2O": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "musclePressure_cmH2O": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "flow_L_s": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "volume_L": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftAlveoli_cmH2O": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftAlveoli_L": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightAlveoli_cmH2O": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightAlveoli_L": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftPleural_cmH2O": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftPleural_L": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightPleural_cmH2O": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightPleural_L": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "muscleNode_cmH2O": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "ambient_cmH2O": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftLungC_L_cmH2O": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightLungC_L_cmH2O": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftChestC_L_cmH2O": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightChestC_L_cmH2O": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "upperR_cmH2O_s_L": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "upperFlow_L_s": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "upperSource_cmH2O": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "upperTarget_cmH2O": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftR_cmH2O_s_L": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftFlow_L_s": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftSource_cmH2O": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftTarget_cmH2O": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightR_cmH2O_s_L": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightFlow_L_s": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightSource_cmH2O": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightTarget_cmH2O": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftDuctR_cmH2O_s_L": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftDuctFlow_L_s": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftDuctSource_cmH2O": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftDuctTarget_cmH2O": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightDuctR_cmH2O_s_L": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightDuctFlow_L_s": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightDuctSource_cmH2O": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightDuctTarget_cmH2O": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "LeftLungCompartment_L": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "LeftTransalveolar_cmH2O": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "RightLungCompartment_L": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "RightTransalveolar_cmH2O": {
+            "step": 0,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          }
+        }
+      }
+    },
+    {
+      "name": "lowC:active-checkpoint-continuation",
+      "passed": true,
+      "detail": {
+        "passed": true,
+        "rows": 3001,
+        "numericFailures": 0,
+        "discreteFailures": [],
+        "worstByField": {
+          "time_s": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "driver_cmH2O": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "musclePressure_cmH2O": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "flow_L_s": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "volume_L": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftAlveoli_cmH2O": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftAlveoli_L": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightAlveoli_cmH2O": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightAlveoli_L": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftPleural_cmH2O": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftPleural_L": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightPleural_cmH2O": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightPleural_L": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "muscleNode_cmH2O": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "ambient_cmH2O": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftLungC_L_cmH2O": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightLungC_L_cmH2O": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftChestC_L_cmH2O": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightChestC_L_cmH2O": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "upperR_cmH2O_s_L": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "upperFlow_L_s": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "upperSource_cmH2O": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "upperTarget_cmH2O": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftR_cmH2O_s_L": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftFlow_L_s": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftSource_cmH2O": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftTarget_cmH2O": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightR_cmH2O_s_L": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightFlow_L_s": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightSource_cmH2O": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightTarget_cmH2O": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftDuctR_cmH2O_s_L": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftDuctFlow_L_s": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftDuctSource_cmH2O": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "leftDuctTarget_cmH2O": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightDuctR_cmH2O_s_L": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightDuctFlow_L_s": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightDuctSource_cmH2O": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "rightDuctTarget_cmH2O": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "LeftLungCompartment_L": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "LeftTransalveolar_cmH2O": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "RightLungCompartment_L": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          },
+          "RightTransalveolar_cmH2O": {
+            "step": 3000,
+            "absoluteDifference": 0.0,
+            "toleranceFraction": 0.0
+          }
+        }
+      }
+    },
+    {
+      "name": "control:isolated-common-configuration",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "highR:isolated-common-configuration",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lowC:isolated-common-configuration",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "repeat-highR:isolated-common-configuration",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "repeat-lowC:isolated-common-configuration",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "control:no-new-modification",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "control:no-action-time-jump",
+      "passed": true,
+      "detail": [
+        {
+          "event": "configuration-before",
+          "step": "0",
+          "time_s": "0"
+        },
+        {
+          "event": "configuration-after",
+          "step": "0",
+          "time_s": "0"
+        }
+      ]
+    },
+    {
+      "name": "highR:isolated-incremental-action",
+      "passed": true,
+      "detail": {
+        "LeftExpiratoryResistanceMultiplier": 3,
+        "LeftInspiratoryResistanceMultiplier": 3,
+        "RightExpiratoryResistanceMultiplier": 3,
+        "RightInspiratoryResistanceMultiplier": 3,
+        "UpperExpiratoryResistanceMultiplier": 3,
+        "UpperInspiratoryResistanceMultiplier": 3
+      }
+    },
+    {
+      "name": "highR:no-action-time-jump",
+      "passed": true,
+      "detail": [
+        {
+          "event": "configuration-before",
+          "step": "0",
+          "time_s": "0"
+        },
+        {
+          "event": "configuration-after",
+          "step": "0",
+          "time_s": "0"
+        },
+        {
+          "event": "modification-before",
+          "step": "1500",
+          "time_s": "29.999999999999449"
+        },
+        {
+          "event": "modification-after",
+          "step": "1500",
+          "time_s": "29.999999999999449"
+        }
+      ]
+    },
+    {
+      "name": "lowC:isolated-incremental-action",
+      "passed": true,
+      "detail": {
+        "LeftComplianceMultiplier": 0.5,
+        "RightComplianceMultiplier": 0.5
+      }
+    },
+    {
+      "name": "lowC:no-action-time-jump",
+      "passed": true,
+      "detail": [
+        {
+          "event": "configuration-before",
+          "step": "0",
+          "time_s": "0"
+        },
+        {
+          "event": "configuration-after",
+          "step": "0",
+          "time_s": "0"
+        },
+        {
+          "event": "modification-before",
+          "step": "1500",
+          "time_s": "29.999999999999449"
+        },
+        {
+          "event": "modification-after",
+          "step": "1500",
+          "time_s": "29.999999999999449"
+        }
+      ]
+    },
+    {
+      "name": "repeat-highR:isolated-incremental-action",
+      "passed": true,
+      "detail": {
+        "LeftExpiratoryResistanceMultiplier": 3,
+        "LeftInspiratoryResistanceMultiplier": 3,
+        "RightExpiratoryResistanceMultiplier": 3,
+        "RightInspiratoryResistanceMultiplier": 3,
+        "UpperExpiratoryResistanceMultiplier": 3,
+        "UpperInspiratoryResistanceMultiplier": 3
+      }
+    },
+    {
+      "name": "repeat-highR:no-action-time-jump",
+      "passed": true,
+      "detail": [
+        {
+          "event": "configuration-before",
+          "step": "0",
+          "time_s": "0"
+        },
+        {
+          "event": "configuration-after",
+          "step": "0",
+          "time_s": "0"
+        },
+        {
+          "event": "modification-before",
+          "step": "1500",
+          "time_s": "29.999999999999449"
+        },
+        {
+          "event": "modification-after",
+          "step": "1500",
+          "time_s": "29.999999999999449"
+        }
+      ]
+    },
+    {
+      "name": "repeat-lowC:isolated-incremental-action",
+      "passed": true,
+      "detail": {
+        "LeftComplianceMultiplier": 0.5,
+        "RightComplianceMultiplier": 0.5
+      }
+    },
+    {
+      "name": "repeat-lowC:no-action-time-jump",
+      "passed": true,
+      "detail": [
+        {
+          "event": "configuration-before",
+          "step": "0",
+          "time_s": "0"
+        },
+        {
+          "event": "configuration-after",
+          "step": "0",
+          "time_s": "0"
+        },
+        {
+          "event": "modification-before",
+          "step": "1500",
+          "time_s": "29.999999999999449"
+        },
+        {
+          "event": "modification-after",
+          "step": "1500",
+          "time_s": "29.999999999999449"
+        }
+      ]
+    },
+    {
+      "name": "restore-highR:no-new-modification",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "restore-highR:no-action-time-jump",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "restore-lowC:no-new-modification",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "restore-lowC:no-action-time-jump",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "highR:native-first-affected-parameter-witness",
+      "passed": true,
+      "detail": {
+        "upperR_cmH2O_s_L": 3.0,
+        "leftR_cmH2O_s_L": 3.0,
+        "rightR_cmH2O_s_L": 3.0,
+        "leftDuctR_cmH2O_s_L": 1.0,
+        "rightDuctR_cmH2O_s_L": 1.0,
+        "leftLungC_L_cmH2O": 1.0,
+        "rightLungC_L_cmH2O": 1.0
+      }
+    },
+    {
+      "name": "lowC:native-first-affected-parameter-witness",
+      "passed": true,
+      "detail": {
+        "upperR_cmH2O_s_L": 1.0,
+        "leftR_cmH2O_s_L": 1.0,
+        "rightR_cmH2O_s_L": 1.0,
+        "leftDuctR_cmH2O_s_L": 1.0,
+        "rightDuctR_cmH2O_s_L": 1.0,
+        "leftLungC_L_cmH2O": 0.5,
+        "rightLungC_L_cmH2O": 0.5
+      }
+    },
+    {
+      "name": "highR:checkpoint-current-parameter-crosscheck",
+      "passed": true,
+      "detail": {
+        "leftLungC_L_cmH2O": {
+          "Value": 0.1,
+          "Unit": "L/cmH2O",
+          "ReadOnly": true
+        },
+        "rightLungC_L_cmH2O": {
+          "Value": 0.1,
+          "Unit": "L/cmH2O",
+          "ReadOnly": true
+        },
+        "leftChestC_L_cmH2O": {
+          "Value": 0.10326040126471038,
+          "Unit": "L/cmH2O",
+          "ReadOnly": true
+        },
+        "rightChestC_L_cmH2O": {
+          "Value": 0.10333651588023209,
+          "Unit": "L/cmH2O",
+          "ReadOnly": true
+        },
+        "upperR_cmH2O_s_L": {
+          "Value": 3.375,
+          "Unit": "cmH2O s/L",
+          "ReadOnly": true
+        },
+        "leftR_cmH2O_s_L": {
+          "Value": 1.3499999999942403,
+          "Unit": "cmH2O s/L",
+          "ReadOnly": true
+        },
+        "rightR_cmH2O_s_L": {
+          "Value": 1.3499999999942403,
+          "Unit": "cmH2O s/L",
+          "ReadOnly": true
+        }
+      }
+    },
+    {
+      "name": "lowC:checkpoint-current-parameter-crosscheck",
+      "passed": true,
+      "detail": {
+        "leftLungC_L_cmH2O": {
+          "Value": 0.05,
+          "Unit": "L/cmH2O",
+          "ReadOnly": true
+        },
+        "rightLungC_L_cmH2O": {
+          "Value": 0.05,
+          "Unit": "L/cmH2O",
+          "ReadOnly": true
+        },
+        "leftChestC_L_cmH2O": {
+          "Value": 0.08616127711687294,
+          "Unit": "L/cmH2O",
+          "ReadOnly": true
+        },
+        "rightChestC_L_cmH2O": {
+          "Value": 0.08748217132671623,
+          "Unit": "L/cmH2O",
+          "ReadOnly": true
+        },
+        "upperR_cmH2O_s_L": {
+          "Value": 1.125,
+          "Unit": "cmH2O s/L",
+          "ReadOnly": true
+        },
+        "leftR_cmH2O_s_L": {
+          "Value": 0.44999999999798174,
+          "Unit": "cmH2O s/L",
+          "ReadOnly": true
+        },
+        "rightR_cmH2O_s_L": {
+          "Value": 0.44999999999798174,
+          "Unit": "cmH2O s/L",
+          "ReadOnly": true
+        }
+      }
+    },
+    {
+      "name": "pure-source-free-topology",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "protected-dependencies-unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete-tidal-breaths",
+      "passed": true,
+      "detail": {
+        "control": 23,
+        "highR": 23,
+        "lowC": 23
+      }
+    },
+    {
+      "name": "distinct-observed-final-breaths",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all-playback-fields-original-row-equality",
+      "passed": true,
+      "detail": {
+        "rows": 18003
+      }
+    }
+  ],
+  "protectedArtifacts": {
+    "engine": 66,
+    "oxygen": 102
+  },
+  "protectedDependencyCount": 115,
+  "nativeParameterWitnesses": {
+    "highR": {
+      "upperR_cmH2O_s_L": 3.0,
+      "leftR_cmH2O_s_L": 3.0,
+      "rightR_cmH2O_s_L": 3.0,
+      "leftDuctR_cmH2O_s_L": 1.0,
+      "rightDuctR_cmH2O_s_L": 1.0,
+      "leftLungC_L_cmH2O": 1.0,
+      "rightLungC_L_cmH2O": 1.0
+    },
+    "lowC": {
+      "upperR_cmH2O_s_L": 1.0,
+      "leftR_cmH2O_s_L": 1.0,
+      "rightR_cmH2O_s_L": 1.0,
+      "leftDuctR_cmH2O_s_L": 1.0,
+      "rightDuctR_cmH2O_s_L": 1.0,
+      "leftLungC_L_cmH2O": 0.5,
+      "rightLungC_L_cmH2O": 0.5
+    }
+  },
+  "completeBreaths": {
+    "control": [
+      {
+        "startStep": 249,
+        "endStep": 499,
+        "startTime_s": 4.979999999999982,
+        "endTime_s": 9.979999999999876,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.4360050872898693,
+        "inspiratoryPeak_L_s": 0.563306207812679,
+        "expiratoryPeak_L_s": -0.6571465322977019
+      },
+      {
+        "startStep": 499,
+        "endStep": 749,
+        "startTime_s": 9.979999999999876,
+        "endTime_s": 14.97999999999977,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.4360050872898471,
+        "inspiratoryPeak_L_s": 0.563306207812679,
+        "expiratoryPeak_L_s": -0.6571465322977019
+      },
+      {
+        "startStep": 749,
+        "endStep": 999,
+        "startTime_s": 14.97999999999977,
+        "endTime_s": 19.979999999999663,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.4360050872898258,
+        "inspiratoryPeak_L_s": 0.563306207812679,
+        "expiratoryPeak_L_s": -0.6571465322977019
+      },
+      {
+        "startStep": 999,
+        "endStep": 1249,
+        "startTime_s": 19.979999999999663,
+        "endTime_s": 24.979999999999556,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.4360050872898471,
+        "inspiratoryPeak_L_s": 0.5633062078128811,
+        "expiratoryPeak_L_s": -0.6571465322977019
+      },
+      {
+        "startStep": 1249,
+        "endStep": 1499,
+        "startTime_s": 24.979999999999556,
+        "endTime_s": 29.97999999999945,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.43600508728989107,
+        "inspiratoryPeak_L_s": 0.5633062078128811,
+        "expiratoryPeak_L_s": -0.6571465322977019
+      },
+      {
+        "startStep": 1499,
+        "endStep": 1749,
+        "startTime_s": 29.97999999999945,
+        "endTime_s": 34.97999999999987,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.4360050872900727,
+        "inspiratoryPeak_L_s": 0.5633062078128811,
+        "expiratoryPeak_L_s": -0.6571465322977019
+      },
+      {
+        "startStep": 1749,
+        "endStep": 1999,
+        "startTime_s": 34.97999999999987,
+        "endTime_s": 39.98000000000065,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.43600508729005094,
+        "inspiratoryPeak_L_s": 0.5633062078128811,
+        "expiratoryPeak_L_s": -0.657146532297904
+      },
+      {
+        "startStep": 1999,
+        "endStep": 2249,
+        "startTime_s": 39.98000000000065,
+        "endTime_s": 44.98000000000143,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.4360050872898693,
+        "inspiratoryPeak_L_s": 0.5633062078128811,
+        "expiratoryPeak_L_s": -0.6571465322977019
+      },
+      {
+        "startStep": 2249,
+        "endStep": 2499,
+        "startTime_s": 44.98000000000143,
+        "endTime_s": 49.980000000002214,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.4360050872899164,
+        "inspiratoryPeak_L_s": 0.5633062078128811,
+        "expiratoryPeak_L_s": -0.657146532297904
+      },
+      {
+        "startStep": 2499,
+        "endStep": 2749,
+        "startTime_s": 49.980000000002214,
+        "endTime_s": 54.980000000002995,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.4360050872900749,
+        "inspiratoryPeak_L_s": 0.5633062078128811,
+        "expiratoryPeak_L_s": -0.657146532297904
+      },
+      {
+        "startStep": 2749,
+        "endStep": 2999,
+        "startTime_s": 54.980000000002995,
+        "endTime_s": 59.98000000000378,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.4360050872900052,
+        "inspiratoryPeak_L_s": 0.5633062078128811,
+        "expiratoryPeak_L_s": -0.657146532297904
+      },
+      {
+        "startStep": 2999,
+        "endStep": 3249,
+        "startTime_s": 59.98000000000378,
+        "endTime_s": 64.98000000000421,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.4360050872898924,
+        "inspiratoryPeak_L_s": 0.5633062078128811,
+        "expiratoryPeak_L_s": -0.657146532297904
+      },
+      {
+        "startStep": 3249,
+        "endStep": 3499,
+        "startTime_s": 64.98000000000421,
+        "endTime_s": 69.98000000000322,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.4360050872899146,
+        "inspiratoryPeak_L_s": 0.5633062078128811,
+        "expiratoryPeak_L_s": -0.657146532297904
+      },
+      {
+        "startStep": 3499,
+        "endStep": 3749,
+        "startTime_s": 69.98000000000322,
+        "endTime_s": 74.98000000000222,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.4360050872900052,
+        "inspiratoryPeak_L_s": 0.5633062078130833,
+        "expiratoryPeak_L_s": -0.657146532297904
+      },
+      {
+        "startStep": 3749,
+        "endStep": 3999,
+        "startTime_s": 74.98000000000222,
+        "endTime_s": 79.98000000000123,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.4360050872900523,
+        "inspiratoryPeak_L_s": 0.5633062078128811,
+        "expiratoryPeak_L_s": -0.657146532297904
+      },
+      {
+        "startStep": 3999,
+        "endStep": 4249,
+        "startTime_s": 79.98000000000123,
+        "endTime_s": 84.98000000000023,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.4360050872900292,
+        "inspiratoryPeak_L_s": 0.5633062078130833,
+        "expiratoryPeak_L_s": -0.657146532297904
+      },
+      {
+        "startStep": 4249,
+        "endStep": 4499,
+        "startTime_s": 84.98000000000023,
+        "endTime_s": 89.97999999999924,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.4360050872900745,
+        "inspiratoryPeak_L_s": 0.5633062078130833,
+        "expiratoryPeak_L_s": -0.657146532297904
+      },
+      {
+        "startStep": 4499,
+        "endStep": 4749,
+        "startTime_s": 89.97999999999924,
+        "endTime_s": 94.97999999999824,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.4360050872900061,
+        "inspiratoryPeak_L_s": 0.5633062078130833,
+        "expiratoryPeak_L_s": -0.657146532297904
+      },
+      {
+        "startStep": 4749,
+        "endStep": 4999,
+        "startTime_s": 94.97999999999824,
+        "endTime_s": 99.97999999999725,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.43600508729002874,
+        "inspiratoryPeak_L_s": 0.5633062078130833,
+        "expiratoryPeak_L_s": -0.657146532297904
+      },
+      {
+        "startStep": 4999,
+        "endStep": 5249,
+        "startTime_s": 99.97999999999725,
+        "endTime_s": 104.97999999999625,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.43600508729007537,
+        "inspiratoryPeak_L_s": 0.5633062078130833,
+        "expiratoryPeak_L_s": -0.6571465322981062
+      },
+      {
+        "startStep": 5249,
+        "endStep": 5499,
+        "startTime_s": 104.97999999999625,
+        "endTime_s": 109.97999999999526,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.4360050872900061,
+        "inspiratoryPeak_L_s": 0.5633062078130833,
+        "expiratoryPeak_L_s": -0.6571465322981062
+      },
+      {
+        "startStep": 5499,
+        "endStep": 5749,
+        "startTime_s": 109.97999999999526,
+        "endTime_s": 114.97999999999426,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.43600508729007537,
+        "inspiratoryPeak_L_s": 0.5633062078130833,
+        "expiratoryPeak_L_s": -0.6571465322981062
+      },
+      {
+        "startStep": 5749,
+        "endStep": 5999,
+        "startTime_s": 114.97999999999426,
+        "endTime_s": 119.97999999999327,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.436005087289983,
+        "inspiratoryPeak_L_s": 0.5633062078130833,
+        "expiratoryPeak_L_s": -0.6571465322981062
+      }
+    ],
+    "highR": [
+      {
+        "startStep": 249,
+        "endStep": 499,
+        "startTime_s": 4.979999999999982,
+        "endTime_s": 9.979999999999876,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.4360050872898693,
+        "inspiratoryPeak_L_s": 0.563306207812679,
+        "expiratoryPeak_L_s": -0.6571465322977019
+      },
+      {
+        "startStep": 499,
+        "endStep": 749,
+        "startTime_s": 9.979999999999876,
+        "endTime_s": 14.97999999999977,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.4360050872898471,
+        "inspiratoryPeak_L_s": 0.563306207812679,
+        "expiratoryPeak_L_s": -0.6571465322977019
+      },
+      {
+        "startStep": 749,
+        "endStep": 999,
+        "startTime_s": 14.97999999999977,
+        "endTime_s": 19.979999999999663,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.4360050872898258,
+        "inspiratoryPeak_L_s": 0.563306207812679,
+        "expiratoryPeak_L_s": -0.6571465322977019
+      },
+      {
+        "startStep": 999,
+        "endStep": 1249,
+        "startTime_s": 19.979999999999663,
+        "endTime_s": 24.979999999999556,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.4360050872898471,
+        "inspiratoryPeak_L_s": 0.5633062078128811,
+        "expiratoryPeak_L_s": -0.6571465322977019
+      },
+      {
+        "startStep": 1249,
+        "endStep": 1499,
+        "startTime_s": 24.979999999999556,
+        "endTime_s": 29.97999999999945,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.43600508728989107,
+        "inspiratoryPeak_L_s": 0.5633062078128811,
+        "expiratoryPeak_L_s": -0.6571465322977019
+      },
+      {
+        "startStep": 1499,
+        "endStep": 1749,
+        "startTime_s": 29.97999999999945,
+        "endTime_s": 34.97999999999987,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.3822961588276934,
+        "inspiratoryPeak_L_s": 0.42946444058981326,
+        "expiratoryPeak_L_s": -0.5316904940617759
+      },
+      {
+        "startStep": 1749,
+        "endStep": 1999,
+        "startTime_s": 34.97999999999987,
+        "endTime_s": 39.98000000000065,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.3821888180395727,
+        "inspiratoryPeak_L_s": 0.4314192841950528,
+        "expiratoryPeak_L_s": -0.5316358064312765
+      },
+      {
+        "startStep": 1999,
+        "endStep": 2249,
+        "startTime_s": 39.98000000000065,
+        "endTime_s": 44.98000000000143,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.3821888179699493,
+        "inspiratoryPeak_L_s": 0.43141928548114566,
+        "expiratoryPeak_L_s": -0.5316358063958398
+      },
+      {
+        "startStep": 2249,
+        "endStep": 2499,
+        "startTime_s": 44.98000000000143,
+        "endTime_s": 49.980000000002214,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.38218881796990134,
+        "inspiratoryPeak_L_s": 0.43141928548114566,
+        "expiratoryPeak_L_s": -0.5316358063958398
+      },
+      {
+        "startStep": 2499,
+        "endStep": 2749,
+        "startTime_s": 49.980000000002214,
+        "endTime_s": 54.980000000002995,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.3821888179699737,
+        "inspiratoryPeak_L_s": 0.43141928548114566,
+        "expiratoryPeak_L_s": -0.5316358063958398
+      },
+      {
+        "startStep": 2749,
+        "endStep": 2999,
+        "startTime_s": 54.980000000002995,
+        "endTime_s": 59.98000000000378,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.3821888179698818,
+        "inspiratoryPeak_L_s": 0.43141928548107833,
+        "expiratoryPeak_L_s": -0.5316358063959072
+      },
+      {
+        "startStep": 2999,
+        "endStep": 3249,
+        "startTime_s": 59.98000000000378,
+        "endTime_s": 64.98000000000421,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.3821888179699946,
+        "inspiratoryPeak_L_s": 0.43141928548114566,
+        "expiratoryPeak_L_s": -0.5316358063958398
+      },
+      {
+        "startStep": 3249,
+        "endStep": 3499,
+        "startTime_s": 64.98000000000421,
+        "endTime_s": 69.98000000000322,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.38218881796999504,
+        "inspiratoryPeak_L_s": 0.43141928548114566,
+        "expiratoryPeak_L_s": -0.5316358063959072
+      },
+      {
+        "startStep": 3499,
+        "endStep": 3749,
+        "startTime_s": 69.98000000000322,
+        "endTime_s": 74.98000000000222,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.3821888179700177,
+        "inspiratoryPeak_L_s": 0.43141928548114566,
+        "expiratoryPeak_L_s": -0.5316358063958398
+      },
+      {
+        "startStep": 3749,
+        "endStep": 3999,
+        "startTime_s": 74.98000000000222,
+        "endTime_s": 79.98000000000123,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.3821888179699706,
+        "inspiratoryPeak_L_s": 0.43141928548114566,
+        "expiratoryPeak_L_s": -0.5316358063959072
+      },
+      {
+        "startStep": 3999,
+        "endStep": 4249,
+        "startTime_s": 79.98000000000123,
+        "endTime_s": 84.98000000000023,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.3821888179699715,
+        "inspiratoryPeak_L_s": 0.43141928548114566,
+        "expiratoryPeak_L_s": -0.5316358063958398
+      },
+      {
+        "startStep": 4249,
+        "endStep": 4499,
+        "startTime_s": 84.98000000000023,
+        "endTime_s": 89.97999999999924,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.3821888179701083,
+        "inspiratoryPeak_L_s": 0.43141928548121306,
+        "expiratoryPeak_L_s": -0.5316358063958398
+      },
+      {
+        "startStep": 4499,
+        "endStep": 4749,
+        "startTime_s": 89.97999999999924,
+        "endTime_s": 94.97999999999824,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.3821888179701327,
+        "inspiratoryPeak_L_s": 0.43141928548121306,
+        "expiratoryPeak_L_s": -0.5316358063958398
+      },
+      {
+        "startStep": 4749,
+        "endStep": 4999,
+        "startTime_s": 94.97999999999824,
+        "endTime_s": 99.97999999999725,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.3821888179699955,
+        "inspiratoryPeak_L_s": 0.43141928548114566,
+        "expiratoryPeak_L_s": -0.5316358063959072
+      },
+      {
+        "startStep": 4999,
+        "endStep": 5249,
+        "startTime_s": 99.97999999999725,
+        "endTime_s": 104.97999999999625,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.38218881796999504,
+        "inspiratoryPeak_L_s": 0.43141928548121306,
+        "expiratoryPeak_L_s": -0.5316358063958398
+      },
+      {
+        "startStep": 5249,
+        "endStep": 5499,
+        "startTime_s": 104.97999999999625,
+        "endTime_s": 109.97999999999526,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.38218881796997106,
+        "inspiratoryPeak_L_s": 0.43141928548121306,
+        "expiratoryPeak_L_s": -0.5316358063959072
+      },
+      {
+        "startStep": 5499,
+        "endStep": 5749,
+        "startTime_s": 109.97999999999526,
+        "endTime_s": 114.97999999999426,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.38218881797003856,
+        "inspiratoryPeak_L_s": 0.43141928548121306,
+        "expiratoryPeak_L_s": -0.5316358063959072
+      },
+      {
+        "startStep": 5749,
+        "endStep": 5999,
+        "startTime_s": 114.97999999999426,
+        "endTime_s": 119.97999999999327,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.3821888179700861,
+        "inspiratoryPeak_L_s": 0.43141928548121306,
+        "expiratoryPeak_L_s": -0.5316358063959072
+      }
+    ],
+    "lowC": [
+      {
+        "startStep": 249,
+        "endStep": 499,
+        "startTime_s": 4.979999999999982,
+        "endTime_s": 9.979999999999876,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.4360050872898693,
+        "inspiratoryPeak_L_s": 0.563306207812679,
+        "expiratoryPeak_L_s": -0.6571465322977019
+      },
+      {
+        "startStep": 499,
+        "endStep": 749,
+        "startTime_s": 9.979999999999876,
+        "endTime_s": 14.97999999999977,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.4360050872898471,
+        "inspiratoryPeak_L_s": 0.563306207812679,
+        "expiratoryPeak_L_s": -0.6571465322977019
+      },
+      {
+        "startStep": 749,
+        "endStep": 999,
+        "startTime_s": 14.97999999999977,
+        "endTime_s": 19.979999999999663,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.4360050872898258,
+        "inspiratoryPeak_L_s": 0.563306207812679,
+        "expiratoryPeak_L_s": -0.6571465322977019
+      },
+      {
+        "startStep": 999,
+        "endStep": 1249,
+        "startTime_s": 19.979999999999663,
+        "endTime_s": 24.979999999999556,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.4360050872898471,
+        "inspiratoryPeak_L_s": 0.5633062078128811,
+        "expiratoryPeak_L_s": -0.6571465322977019
+      },
+      {
+        "startStep": 1249,
+        "endStep": 1499,
+        "startTime_s": 24.979999999999556,
+        "endTime_s": 29.97999999999945,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.43600508728989107,
+        "inspiratoryPeak_L_s": 0.5633062078128811,
+        "expiratoryPeak_L_s": -0.6571465322977019
+      },
+      {
+        "startStep": 1499,
+        "endStep": 1749,
+        "startTime_s": 29.97999999999945,
+        "endTime_s": 34.97999999999987,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.2579903360990312,
+        "inspiratoryPeak_L_s": 0.31504182284617044,
+        "expiratoryPeak_L_s": -2.525276757290865
+      },
+      {
+        "startStep": 1749,
+        "endStep": 1999,
+        "startTime_s": 34.97999999999987,
+        "endTime_s": 39.98000000000065,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.25476945855914934,
+        "inspiratoryPeak_L_s": 0.35315662318902874,
+        "expiratoryPeak_L_s": -0.38170685650543923
+      },
+      {
+        "startStep": 1999,
+        "endStep": 2249,
+        "startTime_s": 39.98000000000065,
+        "endTime_s": 44.98000000000143,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.2547694585591498,
+        "inspiratoryPeak_L_s": 0.35315662318902874,
+        "expiratoryPeak_L_s": -0.38170685650543923
+      },
+      {
+        "startStep": 2249,
+        "endStep": 2499,
+        "startTime_s": 44.98000000000143,
+        "endTime_s": 49.980000000002214,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.25476945855916666,
+        "inspiratoryPeak_L_s": 0.35315662318902874,
+        "expiratoryPeak_L_s": -0.38170685650543923
+      },
+      {
+        "startStep": 2499,
+        "endStep": 2749,
+        "startTime_s": 49.980000000002214,
+        "endTime_s": 54.980000000002995,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.254769458559172,
+        "inspiratoryPeak_L_s": 0.35315662318902874,
+        "expiratoryPeak_L_s": -0.38170685650543923
+      },
+      {
+        "startStep": 2749,
+        "endStep": 2999,
+        "startTime_s": 54.980000000002995,
+        "endTime_s": 59.98000000000378,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.25476945855915023,
+        "inspiratoryPeak_L_s": 0.35315662318902874,
+        "expiratoryPeak_L_s": -0.38170685650543923
+      },
+      {
+        "startStep": 2999,
+        "endStep": 3249,
+        "startTime_s": 59.98000000000378,
+        "endTime_s": 64.98000000000421,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.25476945855911515,
+        "inspiratoryPeak_L_s": 0.35315662318902874,
+        "expiratoryPeak_L_s": -0.38170685650543923
+      },
+      {
+        "startStep": 3249,
+        "endStep": 3499,
+        "startTime_s": 64.98000000000421,
+        "endTime_s": 69.98000000000322,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.2547694585591267,
+        "inspiratoryPeak_L_s": 0.35315662318902874,
+        "expiratoryPeak_L_s": -0.38170685650543923
+      },
+      {
+        "startStep": 3499,
+        "endStep": 3749,
+        "startTime_s": 69.98000000000322,
+        "endTime_s": 74.98000000000222,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.2547694585591329,
+        "inspiratoryPeak_L_s": 0.35315662318902874,
+        "expiratoryPeak_L_s": -0.38170685650543923
+      },
+      {
+        "startStep": 3749,
+        "endStep": 3999,
+        "startTime_s": 74.98000000000222,
+        "endTime_s": 79.98000000000123,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.2547694585591449,
+        "inspiratoryPeak_L_s": 0.35315662318902874,
+        "expiratoryPeak_L_s": -0.38170685650543923
+      },
+      {
+        "startStep": 3999,
+        "endStep": 4249,
+        "startTime_s": 79.98000000000123,
+        "endTime_s": 84.98000000000023,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.2547694585591258,
+        "inspiratoryPeak_L_s": 0.35315662318902874,
+        "expiratoryPeak_L_s": -0.38170685650543923
+      },
+      {
+        "startStep": 4249,
+        "endStep": 4499,
+        "startTime_s": 84.98000000000023,
+        "endTime_s": 89.97999999999924,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.2547694585591267,
+        "inspiratoryPeak_L_s": 0.35315662318902874,
+        "expiratoryPeak_L_s": -0.38170685650543923
+      },
+      {
+        "startStep": 4499,
+        "endStep": 4749,
+        "startTime_s": 89.97999999999924,
+        "endTime_s": 94.97999999999824,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.25476945855910405,
+        "inspiratoryPeak_L_s": 0.35315662318902874,
+        "expiratoryPeak_L_s": -0.38170685650543923
+      },
+      {
+        "startStep": 4749,
+        "endStep": 4999,
+        "startTime_s": 94.97999999999824,
+        "endTime_s": 99.97999999999725,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.25476945855913957,
+        "inspiratoryPeak_L_s": 0.35315662318902874,
+        "expiratoryPeak_L_s": -0.38170685650543923
+      },
+      {
+        "startStep": 4999,
+        "endStep": 5249,
+        "startTime_s": 99.97999999999725,
+        "endTime_s": 104.97999999999625,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.2547694585591511,
+        "inspiratoryPeak_L_s": 0.35315662318902874,
+        "expiratoryPeak_L_s": -0.38170685650543923
+      },
+      {
+        "startStep": 5249,
+        "endStep": 5499,
+        "startTime_s": 104.97999999999625,
+        "endTime_s": 109.97999999999526,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.254769458559144,
+        "inspiratoryPeak_L_s": 0.35315662318902874,
+        "expiratoryPeak_L_s": -0.38170685650543923
+      },
+      {
+        "startStep": 5499,
+        "endStep": 5749,
+        "startTime_s": 109.97999999999526,
+        "endTime_s": 114.97999999999426,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.25476945855912136,
+        "inspiratoryPeak_L_s": 0.35315662318902874,
+        "expiratoryPeak_L_s": -0.38170685650543923
+      },
+      {
+        "startStep": 5749,
+        "endStep": 5999,
+        "startTime_s": 114.97999999999426,
+        "endTime_s": 119.97999999999327,
+        "originalRowsInclusive": 251,
+        "volumeSpan_L": 0.2547694585591276,
+        "inspiratoryPeak_L_s": 0.35315662318902874,
+        "expiratoryPeak_L_s": -0.38170685650543923
+      }
+    ]
+  },
+  "lastCompleteBreaths": {
+    "control": {
+      "startStep": 5749,
+      "endStep": 5999,
+      "startTime_s": 114.97999999999426,
+      "endTime_s": 119.97999999999327,
+      "originalRowsInclusive": 251,
+      "volumeSpan_L": 0.436005087289983,
+      "inspiratoryPeak_L_s": 0.5633062078130833,
+      "expiratoryPeak_L_s": -0.6571465322981062
+    },
+    "highR": {
+      "startStep": 5749,
+      "endStep": 5999,
+      "startTime_s": 114.97999999999426,
+      "endTime_s": 119.97999999999327,
+      "originalRowsInclusive": 251,
+      "volumeSpan_L": 0.3821888179700861,
+      "inspiratoryPeak_L_s": 0.43141928548121306,
+      "expiratoryPeak_L_s": -0.5316358063959072
+    },
+    "lowC": {
+      "startStep": 5749,
+      "endStep": 5999,
+      "startTime_s": 114.97999999999426,
+      "endTime_s": 119.97999999999327,
+      "originalRowsInclusive": 251,
+      "volumeSpan_L": 0.2547694585591276,
+      "inspiratoryPeak_L_s": 0.35315662318902874,
+      "expiratoryPeak_L_s": -0.38170685650543923
+    }
+  },
+  "limitations": [
+    "Engineering consistency, not physiological validation",
+    "Tidal loops, not forced spirometry",
+    "Dynamic pressure-volume relationship is not static compliance",
+    "No gas-volume conservation test without exchange/source terms"
+  ]
+}

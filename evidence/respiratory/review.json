@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "parentUIApproval": true,
+  "scope": "One bounded recorded guided respiratory-mechanics lesson using these exact native and projected artifacts. Not disease, physiological, clinical or learner validation.",
+  "manifestSHA256": "4102cacab2da068d01f31185a830ac84cb29e161a02000d9afa41a8c75f4a94a",
+  "checksSHA256": "9f6ebcc4538234bf3ee34963a4abfb6136d4fdc0eb1231ff2a30a30477ada71f",
+  "lessonDataSHA256": "a7c9b859287b38dfb4d8026f1119c45b12916c829763675bb164bdf6bc5702a3",
+  "fieldMapSHA256": "ba67120d4f6f97f347dd3f6c9263775ab7212065b9dfd4f6ec11768c15688a55",
+  "playback": {
+    "source": "evidence/ui/respiratory/playback.json",
+    "sha256": "f0e9746f3633d8e12eac310249718bc1e47808f557694ebbd14c9e17db1d8ee6",
+    "bytes": 6100431,
+    "format": "columnar-original-fields",
+    "originalRows": 18003,
+    "rowsPerBranch": 6001,
+    "fieldsPerRow": 21,
+    "sourceCadence_s": 0.02,
+    "selectedCadence_s": 0.02,
+    "interpolated": false,
+    "method": "Select named original fields and remove repeated JSON keys; preserve every row and value exactly. Historical comparison checked all native CSV rows and complete-breath summaries. Full native lesson-data.json is not included."
+  },
+  "verification": {
+    "nativeTests": 14,
+    "nativeChecks": 90,
+    "dependencies": 5036,
+    "sourceArchiveComparisons": 3418,
+    "protectedOriginalArtifacts": 66,
+    "protectedOxygenArtifacts": 102,
+    "allPlaybackRowsChecked": 18003,
+    "repeatAndRestore": "Both perturbations repeat and continue from active checkpoints exactly across exported numeric and discrete channels; not byte-identical full state/action JSON.",
+    "nativeArtifacts": 199
+  },
+  "reviewedNuances": [
+    "Restore fills omitted mechanics modifiers with source-defined identity values of 1 via Activate. Only those defaults are allowed; submitted interventions and effective parameters are unchanged.",
+    "Initial incomplete breath was excluded by a regression-fixed boundary detector; old summaries and failed checks remain preserved. No raw recording or numerical tolerance changed.",
+    "Direct native Current circuit access supplies actual R and C witnesses, not public bilateral compliance getters.",
+    "Both perturbations reduce sampled breath-volume span but not equally; no parameter tuning or volume matching was performed.",
+    "Low compliance also reduces resting volume. Diagram must retain this change rather than independently normalizing each branch to appear identical at rest.",
+    "Breathing input-volume uses driver_cmH2O, not absolute musclePressure_cmH2O. Same-side alveolar-minus-pleural pressure may be paired with same-side alveolar volume. Neither dynamic trajectory is a static-compliance test or diagnostic template.",
+    "Playback and authored comparison are not live branching or engine state restoration."
+  ],
+  "publicDerivativeOfSHA256": "d723c7f305523dd0f6af78b0819e52758c524b414da01d61a869cda40fb3f213"
+}

@@ -1,0 +1,194 @@
+[
+  {
+    "field": "step",
+    "unit": "index",
+    "identifier": "exporter integer step",
+    "kind": "recording metadata",
+    "timeSemantics": "Read after completed native AdvanceModelTime; baseline row is loaded full state. No interpolation.",
+    "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/engine/common/controller/Controller.cpp#L775-799"
+  },
+  {
+    "field": "time_s",
+    "unit": "s",
+    "identifier": "PhysiologyEngine.GetSimulationTime(s)",
+    "kind": "recording metadata",
+    "timeSemantics": "Read after completed native AdvanceModelTime; baseline row is loaded full state. No interpolation.",
+    "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/engine/common/controller/Controller.cpp#L775-799"
+  },
+  {
+    "field": "elapsed_s",
+    "unit": "s",
+    "identifier": "PhysiologyEngine.GetSimulationTime(s) - baseline origin 0",
+    "kind": "recording metadata",
+    "timeSemantics": "Read after completed native AdvanceModelTime; baseline row is loaded full state. No interpolation.",
+    "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/engine/common/controller/Controller.cpp#L775-799"
+  },
+  {
+    "field": "Hb_g_dL",
+    "unit": "g/dL",
+    "identifier": "SubstanceManager.Hemoglobin.BloodConcentration(g/dL)",
+    "kind": "derived native output",
+    "timeSemantics": "Read after completed native AdvanceModelTime; baseline row is loaded full state. No interpolation. Global vascular haemoglobin mass excluding bound gas divided by total blood volume; not aortic Hb concentration.",
+    "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/engine/common/system/physiology/BloodChemistryModel.cpp#L231-358"
+  },
+  {
+    "field": "SaO2_fraction",
+    "unit": "fraction",
+    "identifier": "BloodChemistry.OxygenSaturation",
+    "kind": "derived native output",
+    "timeSemantics": "Read after completed native AdvanceModelTime; baseline row is loaded full state. No interpolation. BloodChemistry Process aortic output; instantaneous, not cardiac-cycle averaged.",
+    "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/engine/common/system/physiology/BloodChemistryModel.cpp#L207"
+  },
+  {
+    "field": "CO_L_min",
+    "unit": "L/min",
+    "identifier": "Cardiovascular.CardiacOutput",
+    "kind": "derived native output",
+    "timeSemantics": "Read after completed native AdvanceModelTime; baseline row is loaded full state. No interpolation. Last completed cardiac-cycle output held between cycle updates, not phase-aligned with instantaneous aortic content.",
+    "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/engine/common/system/physiology/CardiovascularModel.cpp#L1485-1492"
+  },
+  {
+    "field": "CaO2_mL_dL",
+    "unit": "mL O2/dL blood",
+    "identifier": "BloodChemistry.ArterialOxygenContent * 100",
+    "kind": "unit-converted native output",
+    "timeSemantics": "Read after completed native AdvanceModelTime; baseline row is loaded full state. No interpolation. BloodChemistry Process aortic output; instantaneous, not cardiac-cycle averaged. Native fraction is mL O2/mL blood.",
+    "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/engine/common/system/physiology/BloodChemistryModel.cpp#L392-426"
+  },
+  {
+    "field": "DO2_mL_min",
+    "unit": "mL O2/min",
+    "identifier": "BloodChemistry.OxygenDelivery(mL/min)",
+    "kind": "derived native output",
+    "timeSemantics": "Read after completed native AdvanceModelTime; baseline row is loaded full state. No interpolation. Product of current aortic content and last completed-cycle CO; not an independent measurement.",
+    "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/engine/common/system/physiology/BloodChemistryModel.cpp#L409-426"
+  },
+  {
+    "field": "SpO2_fraction",
+    "unit": "fraction",
+    "identifier": "BloodChemistry.PulseOximetry",
+    "kind": "derived native output",
+    "timeSemantics": "Read after completed native AdvanceModelTime; baseline row is loaded full state. No interpolation. Right-arm O2 saturation (plus CO if active), not the aortic saturation or a simulated noisy sensor.",
+    "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/engine/common/system/physiology/BloodChemistryModel.cpp#L217-228"
+  },
+  {
+    "field": "PaO2_mmHg",
+    "unit": "mmHg",
+    "identifier": "BloodChemistry.ArterialOxygenPressure",
+    "kind": "derived native output",
+    "timeSemantics": "Read after completed native AdvanceModelTime; baseline row is loaded full state. No interpolation. BloodChemistry Process aortic output; instantaneous, not cardiac-cycle averaged.",
+    "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/engine/common/system/physiology/BloodChemistryModel.cpp#L267-269"
+  },
+  {
+    "field": "hemoglobinMass_g",
+    "unit": "g",
+    "identifier": "BloodChemistry.HemoglobinContent",
+    "kind": "derived native output",
+    "timeSemantics": "Read after completed native AdvanceModelTime; baseline row is loaded full state. No interpolation. Total vascular Hb species mass with bound-gas mass removed; not concentration.",
+    "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/engine/common/system/physiology/BloodChemistryModel.cpp#L231-246"
+  },
+  {
+    "field": "bloodVolume_mL",
+    "unit": "mL",
+    "identifier": "Cardiovascular.BloodVolume",
+    "kind": "derived native output",
+    "timeSemantics": "Read after completed native AdvanceModelTime; baseline row is loaded full state. No interpolation. Sum of vascular-leaf compartment volumes.",
+    "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/engine/common/system/physiology/CardiovascularModel.cpp#L1214-1500"
+  },
+  {
+    "field": "HR_per_min",
+    "unit": "1/min",
+    "identifier": "Cardiovascular.HeartRate",
+    "kind": "derived native output",
+    "timeSemantics": "Read after completed native AdvanceModelTime; baseline row is loaded full state. No interpolation. Heart-driver frequency, updated by cardiovascular model; do not assume common averaging with content.",
+    "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/engine/common/system/physiology/CardiovascularModel.cpp#L2690"
+  },
+  {
+    "field": "aortaO2_mmol_L",
+    "unit": "mmol/L",
+    "identifier": "Aorta.SubstanceQuantity(Oxygen).Molarity",
+    "kind": "compartment state",
+    "timeSemantics": "Read after completed native AdvanceModelTime; baseline row is loaded full state. No interpolation. Aortic molarity at completed step; raw input to implemented content equation.",
+    "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/engine/common/system/physiology/BloodChemistryModel.cpp#L395-400"
+  },
+  {
+    "field": "aortaHbO2_mmol_L",
+    "unit": "mmol/L",
+    "identifier": "Aorta.SubstanceQuantity(Oxyhemoglobin).Molarity",
+    "kind": "compartment state",
+    "timeSemantics": "Read after completed native AdvanceModelTime; baseline row is loaded full state. No interpolation. Aortic molarity at completed step; raw input to implemented content equation.",
+    "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/engine/common/system/physiology/BloodChemistryModel.cpp#L395-400"
+  },
+  {
+    "field": "aortaHbO2CO2_mmol_L",
+    "unit": "mmol/L",
+    "identifier": "Aorta.SubstanceQuantity(OxyCarbaminohemoglobin).Molarity",
+    "kind": "compartment state",
+    "timeSemantics": "Read after completed native AdvanceModelTime; baseline row is loaded full state. No interpolation. Aortic molarity at completed step; raw input to implemented content equation.",
+    "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/engine/common/system/physiology/BloodChemistryModel.cpp#L395-400"
+  },
+  {
+    "field": "O2MolarMass_g_mmol",
+    "unit": "g/mmol",
+    "identifier": "SubstanceManager.Oxygen.MolarMass",
+    "kind": "native substance parameter",
+    "timeSemantics": "Read after completed native AdvanceModelTime; baseline row is loaded full state. No interpolation. Native loaded constant.",
+    "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/engine/common/system/physiology/BloodChemistryModel.cpp#L392-393"
+  },
+  {
+    "field": "O2Density_g_mL",
+    "unit": "g/mL",
+    "identifier": "SubstanceManager.Oxygen.Density",
+    "kind": "native substance parameter",
+    "timeSemantics": "Read after completed native AdvanceModelTime; baseline row is loaded full state. No interpolation. Native loaded constant; implementation describes STPD volume basis.",
+    "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/engine/common/system/physiology/BloodChemistryModel.cpp#L392-393"
+  },
+  {
+    "field": "arterialContent_mL_mL",
+    "unit": "mL O2/mL blood",
+    "identifier": "BloodChemistry.ArterialOxygenContent",
+    "kind": "derived native output",
+    "timeSemantics": "Read after completed native AdvanceModelTime; baseline row is loaded full state. No interpolation. BloodChemistry Process aortic output; instantaneous, not cardiac-cycle averaged.",
+    "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/engine/common/system/physiology/BloodChemistryModel.cpp#L423"
+  },
+  {
+    "field": "anemiaActive",
+    "unit": "boolean 0/1",
+    "identifier": "ActionManager.PatientActions.HasAcuteAnemia",
+    "kind": "action status",
+    "timeSemantics": "Read after completed native AdvanceModelTime; baseline row is loaded full state. No interpolation. Action is queued after sample 3000 and consumed before sample 3001; all sampled rows show false.",
+    "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/engine/common/system/physiology/CardiovascularModel.cpp#L1674-1678"
+  },
+  {
+    "field": "hemorrhageActive",
+    "unit": "boolean 0/1",
+    "identifier": "ActionManager.PatientActions.GetHemorrhages[].IsActive (any)",
+    "kind": "action status",
+    "timeSemantics": "Read after completed native AdvanceModelTime; baseline row is loaded full state. No interpolation.",
+    "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/cdm/io/protobuf/PBEngine.cpp#L320-442"
+  },
+  {
+    "field": "totalLoss_mL",
+    "unit": "mL",
+    "identifier": "Cardiovascular.TotalHemorrhagedVolume",
+    "kind": "derived native output",
+    "timeSemantics": "Read after completed native AdvanceModelTime; baseline row is loaded full state. No interpolation. Native hemorrhage cumulative counter; no hemorrhage action scheduled.",
+    "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/engine/common/system/physiology/CardiovascularModel.cpp#L1665-1685"
+  },
+  {
+    "field": "pathBaselineR_mmHg_s_mL",
+    "unit": "mmHg s/mL",
+    "identifier": "AortaToRightLeg mapped circuit path Aorta1ToRightLeg1.ResistanceBaseline",
+    "kind": "circuit parameter witness",
+    "timeSemantics": "Read after completed native AdvanceModelTime; baseline row is loaded full state. No interpolation. Baseline parameter, not current effective resistance or whole-body SVR; empirical anemia modifier witness only.",
+    "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/engine/common/system/physiology/CardiovascularModel.cpp#L1008-1047"
+  },
+  {
+    "field": "activeEvents",
+    "unit": "semicolon-separated names",
+    "identifier": "EventManager.GetActiveEvents",
+    "kind": "event status",
+    "timeSemantics": "Read after completed native AdvanceModelTime; baseline row is loaded full state. No interpolation. Sorted active event names; not durations.",
+    "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/engine/common/controller/Controller.cpp#L790-799"
+  }
+]

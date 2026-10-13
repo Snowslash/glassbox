@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "scope": "Pulse-only headless feasibility for this pinned build/platform and one fictional StandardMale experiment",
+  "numerical_evidence": "checks.json",
+  "source_audit": "3418 archive files matched; no engine source fork",
+  "coherent_inspection": "36 canonical CSV fields mapped in engine/field-map.json; actual Aorta1ToRightLeg1 current circuit endpoints, resistance and flow",
+  "warning_review": "warnings-review.md",
+  "explanation_review": "Actual results support near-maintained cycle-mean MAP despite lower blood volume and stroke volume. Increased exported baroreceptor resistance/heart-rate/elastance modifiers, decreased compliance modifier, and the increased actual systemic path resistance are consistent with inspected feedback implementation. No quantitative causal share is assigned to any feedback component.",
+  "prior_failure": "Initial relationship checks sampled reset NextResistance after circuit PostProcess. Sampling completed Current circuit values corrected the failure; real reruns passed unchanged tolerances.",
+  "limitations": [
+    "No clinical or educational validation claim",
+    "Not a claim that every upstream API is warning-free; scoped warning review records unexercised defects",
+    "Full engine states support this tested continuation only; CSV scrubbing is recorded replay, not engine restoration",
+    "Cycle-mean/beat-integrated outputs and instantaneous compartment states have different semantics",
+    "Same elapsed time across runs does not imply the same cardiac phase",
+    "Net circulating-volume change includes exchange/redistribution; external loss is separately exported"
+  ],
+  "publicDerivativeOfSHA256": "e046a22014d544a64566606bd6e82a20c9e9c43cc8f5888081ca7dcd1ee0c107"
+}

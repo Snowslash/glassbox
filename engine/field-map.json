@@ -1,0 +1,315 @@
+{
+  "engine_commit": "5e29e5b13710a08cec90874be7d36ecb192ebcda",
+  "precision": "17 significant decimal digits",
+  "sampling": "Every solver step; initial row is loaded checkpoint before action application. All subsequent rows occur after AdvanceModelTime returns. No interpolation.",
+  "fields": [
+    {
+      "field": "step",
+      "unit": "1",
+      "identifier": "exporter step counter",
+      "semantics": "Integer completed solver steps since matched baseline",
+      "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/cdm/PhysiologyEngine.h",
+      "kind": "output"
+    },
+    {
+      "field": "time_s",
+      "unit": "s",
+      "identifier": "PhysiologyEngine::GetSimulationTime(TimeUnit::s)",
+      "semantics": "Actual engine time after completed step; elapsed subtracts baseline time",
+      "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/cdm/PhysiologyEngine.h",
+      "kind": "output"
+    },
+    {
+      "field": "elapsed_s",
+      "unit": "s",
+      "identifier": "PhysiologyEngine::GetSimulationTime(TimeUnit::s)",
+      "semantics": "Actual engine time after completed step; elapsed subtracts baseline time",
+      "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/cdm/PhysiologyEngine.h",
+      "kind": "output"
+    },
+    {
+      "field": "bloodVolume_mL",
+      "unit": "mL",
+      "identifier": "SECardiovascularSystem::GetBloodVolume",
+      "semantics": "Sum of vascular leaf compartment volumes at cardiovascular vital-sign update; net circulating volume, not cumulative external loss",
+      "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/engine/common/system/physiology/CardiovascularModel.cpp#L1452",
+      "kind": "output"
+    },
+    {
+      "field": "MAP_mmHg",
+      "unit": "mmHg",
+      "identifier": "SECardiovascularSystem::GetMeanArterialPressure",
+      "semantics": "Most recently completed cardiac-cycle mean, held between cycle updates",
+      "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/engine/common/system/physiology/CardiovascularModel.cpp#L1580",
+      "kind": "output"
+    },
+    {
+      "field": "HR_per_min",
+      "unit": "1/min",
+      "identifier": "SECardiovascularSystem::GetHeartRate",
+      "semantics": "Heart-driver frequency updated by HeartDriver; not a beat-count window",
+      "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/engine/common/system/physiology/CardiovascularModel.cpp#L2690",
+      "kind": "output"
+    },
+    {
+      "field": "strokeVolume_mL",
+      "unit": "mL",
+      "identifier": "SECardiovascularSystem::GetHeartStrokeVolume",
+      "semantics": "Integrated left-heart outflow over most recently completed cardiac cycle",
+      "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/engine/common/system/physiology/CardiovascularModel.cpp#L1485",
+      "kind": "output"
+    },
+    {
+      "field": "CO_mL_per_min",
+      "unit": "mL/min",
+      "identifier": "SECardiovascularSystem::GetCardiacOutput",
+      "semantics": "Most recently completed cycle stroke volume times reported heart rate",
+      "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/engine/common/system/physiology/CardiovascularModel.cpp#L1492",
+      "kind": "output"
+    },
+    {
+      "field": "lossRate_mL_per_s",
+      "unit": "mL/s",
+      "identifier": "SECardiovascularSystem::GetTotalHemorrhageRate",
+      "semantics": "Sum of actual hemorrhage path NextFlow read in cardiovascular preprocessing; reflects prior circuit solution, not a copy of requested action rate",
+      "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/engine/common/system/physiology/CardiovascularModel.cpp#L1985",
+      "kind": "output"
+    },
+    {
+      "field": "totalLoss_mL",
+      "unit": "mL",
+      "identifier": "SECardiovascularSystem::GetTotalHemorrhagedVolume",
+      "semantics": "Cumulative preprocessing loss-rate times dt; same update convention as lossRate",
+      "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/engine/common/system/physiology/CardiovascularModel.cpp#L1986",
+      "kind": "output"
+    },
+    {
+      "field": "baroHeartRateScale",
+      "unit": "1",
+      "identifier": "SENervousSystem::GetBaroreceptorHeartRateScale",
+      "semantics": "Current model feedback multiplier after nervous preprocessing; downstream systems consume according to update order",
+      "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/engine/common/system/physiology/NervousModel.cpp#L423",
+      "kind": "feedback_state"
+    },
+    {
+      "field": "baroElastanceScale",
+      "unit": "1",
+      "identifier": "SENervousSystem::GetBaroreceptorHeartElastanceScale",
+      "semantics": "Current model feedback multiplier after nervous preprocessing; downstream systems consume according to update order",
+      "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/engine/common/system/physiology/NervousModel.cpp#L430",
+      "kind": "feedback_state"
+    },
+    {
+      "field": "baroResistanceScale",
+      "unit": "1",
+      "identifier": "SENervousSystem::GetBaroreceptorResistanceScale",
+      "semantics": "Current model feedback multiplier after nervous preprocessing; downstream systems consume according to update order",
+      "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/engine/common/system/physiology/NervousModel.cpp#L437",
+      "kind": "feedback_state"
+    },
+    {
+      "field": "baroComplianceScale",
+      "unit": "1",
+      "identifier": "SENervousSystem::GetBaroreceptorComplianceScale",
+      "semantics": "Current model feedback multiplier after nervous preprocessing; downstream systems consume according to update order",
+      "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/engine/common/system/physiology/NervousModel.cpp#L444",
+      "kind": "feedback_state"
+    },
+    {
+      "field": "Aorta_P_mmHg",
+      "unit": "mmHg",
+      "identifier": "SECompartmentManager::GetLiquidCompartment(\"Aorta\")::GetPressure",
+      "semantics": "Instantaneous post-step compartment value. Mapped-node pressure; aggregated pressure is volume-weighted when applicable; these selected compartments are not summed together.",
+      "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/cdm/compartment/fluid/SEFluidCompartment.hxx",
+      "kind": "output"
+    },
+    {
+      "field": "Aorta_V_mL",
+      "unit": "mL",
+      "identifier": "SECompartmentManager::GetLiquidCompartment(\"Aorta\")::GetVolume",
+      "semantics": "Instantaneous post-step compartment value. Sum of mapped-node volumes; these selected compartments are not summed together.",
+      "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/cdm/compartment/fluid/SEFluidCompartment.hxx",
+      "kind": "output"
+    },
+    {
+      "field": "Aorta_inFlow_mL_per_s",
+      "unit": "mL/s",
+      "identifier": "SECompartmentManager::GetLiquidCompartment(\"Aorta\")::GetInflow",
+      "semantics": "Instantaneous post-step compartment value. Sum of incoming signed link contributions classified as inflow; these selected compartments are not summed together.",
+      "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/cdm/compartment/fluid/SEFluidCompartment.hxx",
+      "kind": "output"
+    },
+    {
+      "field": "Aorta_outFlow_mL_per_s",
+      "unit": "mL/s",
+      "identifier": "SECompartmentManager::GetLiquidCompartment(\"Aorta\")::GetOutflow",
+      "semantics": "Instantaneous post-step compartment value. Sum of outgoing signed link contributions classified as outflow; these selected compartments are not summed together.",
+      "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/cdm/compartment/fluid/SEFluidCompartment.hxx",
+      "kind": "output"
+    },
+    {
+      "field": "VenaCava_P_mmHg",
+      "unit": "mmHg",
+      "identifier": "SECompartmentManager::GetLiquidCompartment(\"VenaCava\")::GetPressure",
+      "semantics": "Instantaneous post-step compartment value. Mapped-node pressure; aggregated pressure is volume-weighted when applicable; these selected compartments are not summed together.",
+      "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/cdm/compartment/fluid/SEFluidCompartment.hxx",
+      "kind": "output"
+    },
+    {
+      "field": "VenaCava_V_mL",
+      "unit": "mL",
+      "identifier": "SECompartmentManager::GetLiquidCompartment(\"VenaCava\")::GetVolume",
+      "semantics": "Instantaneous post-step compartment value. Sum of mapped-node volumes; these selected compartments are not summed together.",
+      "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/cdm/compartment/fluid/SEFluidCompartment.hxx",
+      "kind": "output"
+    },
+    {
+      "field": "VenaCava_inFlow_mL_per_s",
+      "unit": "mL/s",
+      "identifier": "SECompartmentManager::GetLiquidCompartment(\"VenaCava\")::GetInflow",
+      "semantics": "Instantaneous post-step compartment value. Sum of incoming signed link contributions classified as inflow; these selected compartments are not summed together.",
+      "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/cdm/compartment/fluid/SEFluidCompartment.hxx",
+      "kind": "output"
+    },
+    {
+      "field": "VenaCava_outFlow_mL_per_s",
+      "unit": "mL/s",
+      "identifier": "SECompartmentManager::GetLiquidCompartment(\"VenaCava\")::GetOutflow",
+      "semantics": "Instantaneous post-step compartment value. Sum of outgoing signed link contributions classified as outflow; these selected compartments are not summed together.",
+      "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/cdm/compartment/fluid/SEFluidCompartment.hxx",
+      "kind": "output"
+    },
+    {
+      "field": "LeftHeart_P_mmHg",
+      "unit": "mmHg",
+      "identifier": "SECompartmentManager::GetLiquidCompartment(\"LeftHeart\")::GetPressure",
+      "semantics": "Instantaneous post-step compartment value. Mapped-node pressure; aggregated pressure is volume-weighted when applicable; these selected compartments are not summed together.",
+      "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/cdm/compartment/fluid/SEFluidCompartment.hxx",
+      "kind": "output"
+    },
+    {
+      "field": "LeftHeart_V_mL",
+      "unit": "mL",
+      "identifier": "SECompartmentManager::GetLiquidCompartment(\"LeftHeart\")::GetVolume",
+      "semantics": "Instantaneous post-step compartment value. Sum of mapped-node volumes; these selected compartments are not summed together.",
+      "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/cdm/compartment/fluid/SEFluidCompartment.hxx",
+      "kind": "output"
+    },
+    {
+      "field": "LeftHeart_inFlow_mL_per_s",
+      "unit": "mL/s",
+      "identifier": "SECompartmentManager::GetLiquidCompartment(\"LeftHeart\")::GetInflow",
+      "semantics": "Instantaneous post-step compartment value. Sum of incoming signed link contributions classified as inflow; these selected compartments are not summed together.",
+      "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/cdm/compartment/fluid/SEFluidCompartment.hxx",
+      "kind": "output"
+    },
+    {
+      "field": "LeftHeart_outFlow_mL_per_s",
+      "unit": "mL/s",
+      "identifier": "SECompartmentManager::GetLiquidCompartment(\"LeftHeart\")::GetOutflow",
+      "semantics": "Instantaneous post-step compartment value. Sum of outgoing signed link contributions classified as outflow; these selected compartments are not summed together.",
+      "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/cdm/compartment/fluid/SEFluidCompartment.hxx",
+      "kind": "output"
+    },
+    {
+      "field": "RightHeart_P_mmHg",
+      "unit": "mmHg",
+      "identifier": "SECompartmentManager::GetLiquidCompartment(\"RightHeart\")::GetPressure",
+      "semantics": "Instantaneous post-step compartment value. Mapped-node pressure; aggregated pressure is volume-weighted when applicable; these selected compartments are not summed together.",
+      "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/cdm/compartment/fluid/SEFluidCompartment.hxx",
+      "kind": "output"
+    },
+    {
+      "field": "RightHeart_V_mL",
+      "unit": "mL",
+      "identifier": "SECompartmentManager::GetLiquidCompartment(\"RightHeart\")::GetVolume",
+      "semantics": "Instantaneous post-step compartment value. Sum of mapped-node volumes; these selected compartments are not summed together.",
+      "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/cdm/compartment/fluid/SEFluidCompartment.hxx",
+      "kind": "output"
+    },
+    {
+      "field": "RightHeart_inFlow_mL_per_s",
+      "unit": "mL/s",
+      "identifier": "SECompartmentManager::GetLiquidCompartment(\"RightHeart\")::GetInflow",
+      "semantics": "Instantaneous post-step compartment value. Sum of incoming signed link contributions classified as inflow; these selected compartments are not summed together.",
+      "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/cdm/compartment/fluid/SEFluidCompartment.hxx",
+      "kind": "output"
+    },
+    {
+      "field": "RightHeart_outFlow_mL_per_s",
+      "unit": "mL/s",
+      "identifier": "SECompartmentManager::GetLiquidCompartment(\"RightHeart\")::GetOutflow",
+      "semantics": "Instantaneous post-step compartment value. Sum of outgoing signed link contributions classified as outflow; these selected compartments are not summed together.",
+      "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/cdm/compartment/fluid/SEFluidCompartment.hxx",
+      "kind": "output"
+    },
+    {
+      "field": "path_source_mmHg",
+      "unit": "mmHg",
+      "identifier": "GetLiquidLink(\"AortaToRightLeg\")->GetPath()->GetSourceNode().GetPressure",
+      "semantics": "Actual circuit Current value after completed step. SECircuitCalculator::PostProcess copies solved Next to Current then resets Next resistance to baseline; therefore do not read NextResistance here. Source-free pure resistance checked at runtime; path/node identifiers recorded per-run topology file",
+      "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/cdm/circuit/SECircuitCalculator.cpp#L1117",
+      "kind": "circuit_state"
+    },
+    {
+      "field": "path_target_mmHg",
+      "unit": "mmHg",
+      "identifier": "GetLiquidLink(\"AortaToRightLeg\")->GetPath()->GetTargetNode().GetPressure",
+      "semantics": "Actual circuit Current value after completed step. SECircuitCalculator::PostProcess copies solved Next to Current then resets Next resistance to baseline; therefore do not read NextResistance here. Source-free pure resistance checked at runtime; path/node identifiers recorded per-run topology file",
+      "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/cdm/circuit/SECircuitCalculator.cpp#L1117",
+      "kind": "circuit_state"
+    },
+    {
+      "field": "path_R_mmHg_s_per_mL",
+      "unit": "mmHg s/mL",
+      "identifier": "GetLiquidLink(\"AortaToRightLeg\")->GetPath()->GetResistance",
+      "semantics": "Actual circuit Current value after completed step. SECircuitCalculator::PostProcess copies solved Next to Current then resets Next resistance to baseline; therefore do not read NextResistance here. Source-free pure resistance checked at runtime; path/node identifiers recorded per-run topology file",
+      "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/cdm/circuit/SECircuitCalculator.cpp#L1117",
+      "kind": "circuit_state"
+    },
+    {
+      "field": "path_Q_mL_per_s",
+      "unit": "mL/s",
+      "identifier": "GetLiquidLink(\"AortaToRightLeg\")->GetPath()->GetFlow",
+      "semantics": "Actual circuit Current value after completed step. SECircuitCalculator::PostProcess copies solved Next to Current then resets Next resistance to baseline; therefore do not read NextResistance here. Source-free pure resistance checked at runtime; path/node identifiers recorded per-run topology file",
+      "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/cdm/circuit/SECircuitCalculator.cpp#L1117",
+      "kind": "circuit_state"
+    },
+    {
+      "field": "hemorrhageActive",
+      "unit": "1",
+      "identifier": "SEActionManager::GetPatientActions().GetHemorrhages().IsActive",
+      "semantics": "Any active hemorrhage action at sample time; action JSON supplies exact identity and parameters",
+      "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/cdm/patient/actions/SEHemorrhage.h",
+      "kind": "action"
+    },
+    {
+      "field": "activeEvents",
+      "unit": "event_names",
+      "identifier": "SEEventManager::GetActiveEvents",
+      "semantics": "Sorted semicolon-separated active engine event names per completed step, including cycle events",
+      "source": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/cdm/engine/SEEventManager.h",
+      "kind": "event"
+    }
+  ],
+  "relationship": {
+    "equation": "Q=(Psource-Ptarget)/R",
+    "units": "mL/s=(mmHg-mmHg)/(mmHg s/mL)",
+    "topology": "AortaToRightLeg mapped circuit path, exact node IDs in run.topology.txt",
+    "not_used": "Reported systemic vascular resistance is an algebraic output, not independent causal evidence."
+  },
+  "mechanism_sources": [
+    "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/engine/common/system/physiology/NervousModel.cpp#L298",
+    "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/engine/common/system/physiology/NervousModel.cpp#L432",
+    "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/engine/common/system/physiology/CardiovascularModel.cpp#L2623",
+    "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/engine/common/system/physiology/CardiovascularModel.cpp#L2806",
+    "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/engine/common/system/physiology/CardiovascularModel.cpp#L2855"
+  ],
+  "limitations": [
+    "A recorded row is not a full engine state.",
+    "No atria; compartment volumes and pressures are model constructs, not literal anatomy.",
+    "Blood-volume change also reflects redistribution/exchange and other sinks; it need not equal cumulative hemorrhage.",
+    "Prescribed external flow is pressure-independent; no treatment inference.",
+    "Matched control versus bleed does not isolate baroreflex causal contribution."
+  ]
+}

@@ -1,0 +1,262 @@
+{
+  "schemaVersion": 1,
+  "precisionDigits": 17,
+  "fields": {
+    "step": {
+      "source": "Authored solver call count (restored starts at 3000)",
+      "units": "dimensionless",
+      "timeSemantics": "0 initial baseline; 1500 last pre-action; 1501 first affected; 3000 checkpoint; 6000 final"
+    },
+    "time_s": {
+      "source": "PhysiologyEngine::GetSimulationTime(TimeUnit::s)",
+      "units": "s",
+      "timeSemantics": "Actual native time, never reset/rebased; floating-point accumulation retained"
+    },
+    "activeEvents": {
+      "source": "SEEventManager::GetActiveEvents; alphabetically sorted names",
+      "units": "event-name set",
+      "timeSemantics": "Active at completed sample; pulse-like events retain native solver timing"
+    },
+    "driver_cmH2O": {
+      "source": "EnvironmentToRespiratoryMuscle.GetPressureSource(Current)",
+      "units": "cmH2O",
+      "timeSemantics": "Current completed solver state after PostProcess; initial row is loaded baseline/checkpoint"
+    },
+    "musclePressure_cmH2O": {
+      "source": "SERespiratorySystem::GetRespiratoryMusclePressure",
+      "units": "cmH2O absolute",
+      "timeSemantics": "RespiratoryModel.cpp 2724,2736 reads solved Next muscle node during Process; equals Current node after PostProcess"
+    },
+    "flow_L_s": {
+      "source": "SERespiratorySystem::GetInspiratoryFlow",
+      "units": "L/s",
+      "timeSemantics": "Signed LarynxToTrachea Next flow in Process (2715-2718); equals Current path flow after PostProcess; positive toward lungs"
+    },
+    "volume_L": {
+      "source": "SERespiratorySystem::GetTotalLungVolume; PulmonaryLungs gas compartment",
+      "units": "L",
+      "timeSemantics": "RespiratoryModel.cpp 2701-2703; compartment node mapping reads solved Next quantities. Sum of left/right pulmonary children, not pleural volumes"
+    },
+    "leftAlveoli_cmH2O": {
+      "source": "LeftAlveoli.GetPressure(Current)",
+      "units": "cmH2O absolute",
+      "timeSemantics": "Current completed solver state after PostProcess; initial row is loaded baseline/checkpoint"
+    },
+    "leftAlveoli_L": {
+      "source": "LeftAlveoli.GetVolume(Current)",
+      "units": "L",
+      "timeSemantics": "Current completed solver state after PostProcess; initial row is loaded baseline/checkpoint"
+    },
+    "rightAlveoli_cmH2O": {
+      "source": "RightAlveoli.GetPressure(Current)",
+      "units": "cmH2O absolute",
+      "timeSemantics": "Current completed solver state after PostProcess; initial row is loaded baseline/checkpoint"
+    },
+    "rightAlveoli_L": {
+      "source": "RightAlveoli.GetVolume(Current)",
+      "units": "L",
+      "timeSemantics": "Current completed solver state after PostProcess; initial row is loaded baseline/checkpoint"
+    },
+    "leftPleural_cmH2O": {
+      "source": "LeftPleural.GetPressure(Current)",
+      "units": "cmH2O absolute",
+      "timeSemantics": "Current completed solver state after PostProcess; initial row is loaded baseline/checkpoint"
+    },
+    "leftPleural_L": {
+      "source": "LeftPleural.GetVolume(Current)",
+      "units": "L",
+      "timeSemantics": "Current completed solver state after PostProcess; initial row is loaded baseline/checkpoint"
+    },
+    "rightPleural_cmH2O": {
+      "source": "RightPleural.GetPressure(Current)",
+      "units": "cmH2O absolute",
+      "timeSemantics": "Current completed solver state after PostProcess; initial row is loaded baseline/checkpoint"
+    },
+    "rightPleural_L": {
+      "source": "RightPleural.GetVolume(Current)",
+      "units": "L",
+      "timeSemantics": "Current completed solver state after PostProcess; initial row is loaded baseline/checkpoint"
+    },
+    "muscleNode_cmH2O": {
+      "source": "RespiratoryMuscle.GetPressure(Current)",
+      "units": "cmH2O absolute",
+      "timeSemantics": "Current completed solver state after PostProcess; initial row is loaded baseline/checkpoint"
+    },
+    "ambient_cmH2O": {
+      "source": "Ambient.GetPressure(Current)",
+      "units": "cmH2O absolute",
+      "timeSemantics": "Current completed solver state after PostProcess; initial row is loaded baseline/checkpoint"
+    },
+    "leftLungC_L_cmH2O": {
+      "source": "LeftAlveoliToLeftPleuralConnection.GetCompliance(Current)",
+      "units": "L/cmH2O",
+      "timeSemantics": "Actual parameter used in completed solve, not volume/pressure quotient. Lung C modifiers applied in PreProcess 4618-4629; chest-wall C depends on preceding volume state. Current getters through public pulse::Engine::GetController().GetCircuits(), not exposed calculated system compliance."
+    },
+    "rightLungC_L_cmH2O": {
+      "source": "RightAlveoliToRightPleuralConnection.GetCompliance(Current)",
+      "units": "L/cmH2O",
+      "timeSemantics": "Actual parameter used in completed solve, not volume/pressure quotient. Lung C modifiers applied in PreProcess 4618-4629; chest-wall C depends on preceding volume state. Current getters through public pulse::Engine::GetController().GetCircuits(), not exposed calculated system compliance."
+    },
+    "leftChestC_L_cmH2O": {
+      "source": "LeftPleuralToRespiratoryMuscle.GetCompliance(Current)",
+      "units": "L/cmH2O",
+      "timeSemantics": "Actual parameter used in completed solve, not volume/pressure quotient. Lung C modifiers applied in PreProcess 4618-4629; chest-wall C depends on preceding volume state. Current getters through public pulse::Engine::GetController().GetCircuits(), not exposed calculated system compliance."
+    },
+    "rightChestC_L_cmH2O": {
+      "source": "RightPleuralToRespiratoryMuscle.GetCompliance(Current)",
+      "units": "L/cmH2O",
+      "timeSemantics": "Actual parameter used in completed solve, not volume/pressure quotient. Lung C modifiers applied in PreProcess 4618-4629; chest-wall C depends on preceding volume state. Current getters through public pulse::Engine::GetController().GetCircuits(), not exposed calculated system compliance."
+    },
+    "upperR_cmH2O_s_L": {
+      "source": "LarynxToTrachea.GetResistance(Current)",
+      "units": "cmH2O s/L",
+      "timeSemantics": "Current completed solver state after PostProcess; initial row is loaded baseline/checkpoint"
+    },
+    "upperFlow_L_s": {
+      "source": "LarynxToTrachea.GetFlow(Current)",
+      "units": "L/s; source to target positive",
+      "timeSemantics": "Current completed solver state after PostProcess; initial row is loaded baseline/checkpoint"
+    },
+    "upperSource_cmH2O": {
+      "source": "LarynxToTrachea.GetSourceNode().GetPressure(Current)",
+      "units": "cmH2O absolute",
+      "timeSemantics": "Current completed solver state after PostProcess; initial row is loaded baseline/checkpoint"
+    },
+    "upperTarget_cmH2O": {
+      "source": "LarynxToTrachea.GetTargetNode().GetPressure(Current)",
+      "units": "cmH2O absolute",
+      "timeSemantics": "Current completed solver state after PostProcess; initial row is loaded baseline/checkpoint"
+    },
+    "leftR_cmH2O_s_L": {
+      "source": "TracheaToLeftConductingAirways.GetResistance(Current)",
+      "units": "cmH2O s/L",
+      "timeSemantics": "Current completed solver state after PostProcess; initial row is loaded baseline/checkpoint"
+    },
+    "leftFlow_L_s": {
+      "source": "TracheaToLeftConductingAirways.GetFlow(Current)",
+      "units": "L/s; source to target positive",
+      "timeSemantics": "Current completed solver state after PostProcess; initial row is loaded baseline/checkpoint"
+    },
+    "leftSource_cmH2O": {
+      "source": "TracheaToLeftConductingAirways.GetSourceNode().GetPressure(Current)",
+      "units": "cmH2O absolute",
+      "timeSemantics": "Current completed solver state after PostProcess; initial row is loaded baseline/checkpoint"
+    },
+    "leftTarget_cmH2O": {
+      "source": "TracheaToLeftConductingAirways.GetTargetNode().GetPressure(Current)",
+      "units": "cmH2O absolute",
+      "timeSemantics": "Current completed solver state after PostProcess; initial row is loaded baseline/checkpoint"
+    },
+    "rightR_cmH2O_s_L": {
+      "source": "TracheaToRightConductingAirways.GetResistance(Current)",
+      "units": "cmH2O s/L",
+      "timeSemantics": "Current completed solver state after PostProcess; initial row is loaded baseline/checkpoint"
+    },
+    "rightFlow_L_s": {
+      "source": "TracheaToRightConductingAirways.GetFlow(Current)",
+      "units": "L/s; source to target positive",
+      "timeSemantics": "Current completed solver state after PostProcess; initial row is loaded baseline/checkpoint"
+    },
+    "rightSource_cmH2O": {
+      "source": "TracheaToRightConductingAirways.GetSourceNode().GetPressure(Current)",
+      "units": "cmH2O absolute",
+      "timeSemantics": "Current completed solver state after PostProcess; initial row is loaded baseline/checkpoint"
+    },
+    "rightTarget_cmH2O": {
+      "source": "TracheaToRightConductingAirways.GetTargetNode().GetPressure(Current)",
+      "units": "cmH2O absolute",
+      "timeSemantics": "Current completed solver state after PostProcess; initial row is loaded baseline/checkpoint"
+    },
+    "leftDuctR_cmH2O_s_L": {
+      "source": "LeftConductingAirwaysToLeftAlveolarDeadSpace.GetResistance(Current)",
+      "units": "cmH2O s/L",
+      "timeSemantics": "Current completed solver state after PostProcess; initial row is loaded baseline/checkpoint"
+    },
+    "leftDuctFlow_L_s": {
+      "source": "LeftConductingAirwaysToLeftAlveolarDeadSpace.GetFlow(Current)",
+      "units": "L/s; source to target positive",
+      "timeSemantics": "Current completed solver state after PostProcess; initial row is loaded baseline/checkpoint"
+    },
+    "leftDuctSource_cmH2O": {
+      "source": "LeftConductingAirwaysToLeftAlveolarDeadSpace.GetSourceNode().GetPressure(Current)",
+      "units": "cmH2O absolute",
+      "timeSemantics": "Current completed solver state after PostProcess; initial row is loaded baseline/checkpoint"
+    },
+    "leftDuctTarget_cmH2O": {
+      "source": "LeftConductingAirwaysToLeftAlveolarDeadSpace.GetTargetNode().GetPressure(Current)",
+      "units": "cmH2O absolute",
+      "timeSemantics": "Current completed solver state after PostProcess; initial row is loaded baseline/checkpoint"
+    },
+    "rightDuctR_cmH2O_s_L": {
+      "source": "RightConductingAirwaysToRightAlveolarDeadSpace.GetResistance(Current)",
+      "units": "cmH2O s/L",
+      "timeSemantics": "Current completed solver state after PostProcess; initial row is loaded baseline/checkpoint"
+    },
+    "rightDuctFlow_L_s": {
+      "source": "RightConductingAirwaysToRightAlveolarDeadSpace.GetFlow(Current)",
+      "units": "L/s; source to target positive",
+      "timeSemantics": "Current completed solver state after PostProcess; initial row is loaded baseline/checkpoint"
+    },
+    "rightDuctSource_cmH2O": {
+      "source": "RightConductingAirwaysToRightAlveolarDeadSpace.GetSourceNode().GetPressure(Current)",
+      "units": "cmH2O absolute",
+      "timeSemantics": "Current completed solver state after PostProcess; initial row is loaded baseline/checkpoint"
+    },
+    "rightDuctTarget_cmH2O": {
+      "source": "RightConductingAirwaysToRightAlveolarDeadSpace.GetTargetNode().GetPressure(Current)",
+      "units": "cmH2O absolute",
+      "timeSemantics": "Current completed solver state after PostProcess; initial row is loaded baseline/checkpoint"
+    },
+    "LeftLungCompartment_L": {
+      "source": "LeftLungPulmonary.GetVolume",
+      "units": "L",
+      "timeSemantics": "Aggregate conducting airways + alveolar dead space + alveoli, each once; getters use solved Next node volumes, equal completed Current; not a sum including pleural cavity"
+    },
+    "LeftTransalveolar_cmH2O": {
+      "source": "LeftAlveoli.CurrentPressure - LeftPleural.CurrentPressure",
+      "units": "cmH2O difference",
+      "timeSemantics": "Explicit same-side instantaneous alveolar-minus-pleural distending pressure, not Pulse GetTranspulmonaryPressure which uses airway-opening minus pleural pressure"
+    },
+    "RightLungCompartment_L": {
+      "source": "RightLungPulmonary.GetVolume",
+      "units": "L",
+      "timeSemantics": "Aggregate conducting airways + alveolar dead space + alveoli, each once; getters use solved Next node volumes, equal completed Current; not a sum including pleural cavity"
+    },
+    "RightTransalveolar_cmH2O": {
+      "source": "RightAlveoli.CurrentPressure - RightPleural.CurrentPressure",
+      "units": "cmH2O difference",
+      "timeSemantics": "Explicit same-side instantaneous alveolar-minus-pleural distending pressure, not Pulse GetTranspulmonaryPressure which uses airway-opening minus pleural pressure"
+    }
+  },
+  "nativeAccess": "Public pulse::Engine::GetController -> CircuitManager -> GetActiveRespiratoryCircuit plus gas compartment/link path identity checks. No protected-member hack or engine fork.",
+  "sourceRoot": "https://gitlab.kitware.com/physiology/engine/-/tree/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp",
+  "sourceCommit": "5e29e5b13710a08cec90874be7d36ecb192ebcda",
+  "hierarchy": {
+    "PulmonaryLungs": {
+      "Name": "PulmonaryLungs",
+      "Child": [
+        "LeftLungPulmonary",
+        "RightLungPulmonary"
+      ]
+    },
+    "LeftLungPulmonary": {
+      "Name": "LeftLungPulmonary",
+      "Child": [
+        "LeftConductingAirways",
+        "LeftAlveolarDeadSpace",
+        "LeftAlveoli"
+      ]
+    },
+    "RightLungPulmonary": {
+      "Name": "RightLungPulmonary",
+      "Child": [
+        "RightConductingAirways",
+        "RightAlveolarDeadSpace",
+        "RightAlveoli"
+      ]
+    }
+  },
+  "nonAggregation": "Never add parent and children. Pleural circuit volumes are mechanical state, not extra alveolar gas. Ambient volume is intentionally infinite (SetupCircuitsAndCompartments.cpp 106-108), not a finite pulmonary recording channel.",
+  "timing": "Driver phase inherited from baseline; Instantaneous common configuration does not reset native cycle. Breath start algorithm follows actual driver departure, not t modulo 5.",
+  "pressureAxis": "Use same-side LeftTransalveolar_cmH2O versus leftAlveoli_L for dynamic distension; no bilateral weighting hidden. Use driver_cmH2O versus volume_L only as labelled input-volume. Flow-volume is tidal."
+}

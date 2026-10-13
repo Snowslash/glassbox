@@ -1,0 +1,156 @@
+{
+  "gateStatus": "PASS",
+  "approvalScope": "Recorded native consistency checks for the included observation replay; not physiological validation.",
+  "criterionCorrection": "Post-hoc criterion correction: no repeated loss, not symmetric constancy. Same rtol=1e-6 atol=1e-8; original FAIL remains non-gating. This is not a conservation test; the positive drift cause is unresolved.",
+  "relationships": {
+    "control": {
+      "status": "PASS",
+      "rows": 18001,
+      "maximumAbsoluteResidual": {
+        "delivery": 2.2737367544323206e-13,
+        "content": 1.4210854715202004e-14,
+        "hemoglobin": 0.0,
+        "conversion": 0.0
+      }
+    },
+    "anaemia": {
+      "status": "PASS",
+      "rows": 18001,
+      "maximumAbsoluteResidual": {
+        "delivery": 2.2737367544323206e-13,
+        "content": 1.0658141036401503e-14,
+        "hemoglobin": 0.0,
+        "conversion": 0.0
+      }
+    },
+    "repeat": {
+      "status": "PASS",
+      "rows": 18001,
+      "maximumAbsoluteResidual": {
+        "delivery": 2.2737367544323206e-13,
+        "content": 1.0658141036401503e-14,
+        "hemoglobin": 0.0,
+        "conversion": 0.0
+      }
+    },
+    "restore": {
+      "status": "PASS",
+      "rows": 9001,
+      "maximumAbsoluteResidual": {
+        "delivery": 1.1368683772161603e-13,
+        "content": 8.881784197001252e-15,
+        "hemoglobin": 0.0,
+        "conversion": 0.0
+      }
+    }
+  },
+  "warningsErrors": {
+    "runs": {
+      "control": {
+        "status": "PASS",
+        "warningCount": 0,
+        "errorCount": 0,
+        "log": "control.log"
+      },
+      "anaemia": {
+        "status": "PASS",
+        "warningCount": 0,
+        "errorCount": 0,
+        "log": "anaemia.log"
+      },
+      "repeat": {
+        "status": "PASS",
+        "warningCount": 0,
+        "errorCount": 0,
+        "log": "repeat.log"
+      },
+      "restore": {
+        "status": "PASS",
+        "warningCount": 0,
+        "errorCount": 0,
+        "log": "restore.log"
+      }
+    },
+    "status": "PASS"
+  },
+  "freshRepeat": {
+    "status": "PASS",
+    "rows": 18001,
+    "maximumAbsoluteDifference": 0.0,
+    "exact": true,
+    "rtol": 0,
+    "atol": 0
+  },
+  "checkpointContinuation": {
+    "status": "PASS",
+    "rows": 9001,
+    "maximumAbsoluteDifference": 4.697425492850016e-05,
+    "exact": false,
+    "rtol": 1e-06,
+    "atol": 1e-08
+  },
+  "matchedPreAction": {
+    "status": "PASS",
+    "rows": 3001,
+    "maximumAbsoluteDifference": 0.0
+  },
+  "oneShotNoRepeatedLoss": {
+    "status": "PASS",
+    "firstPostToPreHbMassRatio": 0.7000000000726581,
+    "firstPostToPreBaselineResistanceRatio": 0.955,
+    "postActionMaximumMassDrift_g": 0.0005902470450109831
+  },
+  "postActionMassRetention": {
+    "status": "FAIL",
+    "gating": false,
+    "rtol": 1e-06,
+    "atol": 1e-08,
+    "failedRowCount": 624,
+    "firstFailureStep": 17354.0,
+    "maximumGain_g": 0.0005902470450109831,
+    "minimumDrift_g": -1.2509190128184855e-08,
+    "postActionMinimumDrift_g": 0.0,
+    "preActionMinimumDrift_g": -1.2509190128184855e-08,
+    "warning": "Any gain, including gross gains, is reported here; no conservation claim. Exact cause unresolved."
+  },
+  "sourceRowSelection": {
+    "status": "PASS",
+    "stride": 50,
+    "rowsPerRun": 361,
+    "allFieldsCompared": true
+  },
+  "noBloodLossAction": {
+    "status": "PASS"
+  },
+  "actionEvidence": {
+    "status": "PASS",
+    "nativeLogActionFactor": 0.3,
+    "collectionSerializationQualification": "PBEngine omits pending AcuteAnemia; empty manager JSON cannot prove absence. Individual native log JSON preserved."
+  },
+  "tolerances": {
+    "declaredBeforeNativeRuns": true,
+    "relationship": {
+      "rtol": 1e-10,
+      "atol": 1e-08
+    },
+    "freshRepeat": "exact numeric and event equality on this platform",
+    "checkpoint": {
+      "rtol": 1e-06,
+      "atol": 1e-08
+    },
+    "scheduleAbsoluteTolerance_s": 1e-07,
+    "oneShotMassRatio": {
+      "expected": 0.7,
+      "rtol": 1e-06,
+      "atol": 1e-08
+    },
+    "postActionMassRetention": {
+      "reference": "first completed post-action step",
+      "rtol": 1e-06,
+      "atol": 1e-08
+    },
+    "bloodLoss": "no hemorrhage action, zero total hemorrhaged volume; natural volume exchange is not forbidden",
+    "outcome": "No gate forces saturation, cardiac-output compensation, or lower delivery",
+    "meaning": "Engineering consistency criteria only, not clinical cutoffs or physiological validation"
+  }
+}

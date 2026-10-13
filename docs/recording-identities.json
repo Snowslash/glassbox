@@ -1,0 +1,244 @@
+{
+  "engine/field-map.json": {
+    "original": {
+      "bytes": 20194,
+      "sha256": "3b518dc613971a64b56177449935c3144ab1989d673b0cc0b31023681b979a30"
+    },
+    "distributed": {
+      "sha256": "3b518dc613971a64b56177449935c3144ab1989d673b0cc0b31023681b979a30",
+      "bytes": 20194
+    },
+    "kind": "original bytes"
+  },
+  "evidence/engine/annotated-state.md": {
+    "original": {
+      "bytes": 4861,
+      "sha256": "b03888250a8897d6230a764cf7cd9bb3230a83db172bbe769b13a6b350429ef3"
+    },
+    "distributed": {
+      "sha256": "1e6175d508666b8ea23dcde820224a9ccbaf2c2264bae7a5955e9ecb66b3b8c0",
+      "bytes": 5021
+    },
+    "kind": "public derivative"
+  },
+  "evidence/engine/checks.json": {
+    "original": {
+      "bytes": 17137,
+      "sha256": "d4d96307309d043690ffb8ac252079188a13942c80d9360c9600317946e8b281"
+    },
+    "distributed": {
+      "sha256": "d4d96307309d043690ffb8ac252079188a13942c80d9360c9600317946e8b281",
+      "bytes": 17137
+    },
+    "kind": "original bytes"
+  },
+  "evidence/engine/lesson-data.json": {
+    "original": {
+      "bytes": 1425333,
+      "sha256": "69916dc8742dc7b7fad69302017b5952203d4c9bb2d9590dfa004b0e12a20ea1"
+    },
+    "distributed": {
+      "sha256": "69916dc8742dc7b7fad69302017b5952203d4c9bb2d9590dfa004b0e12a20ea1",
+      "bytes": 1425333
+    },
+    "kind": "original bytes"
+  },
+  "evidence/engine/manifest.json": {
+    "original": {
+      "bytes": 58400,
+      "sha256": "46a0afbf3190ad7b1bbe106d5bdbf3be3e977348467f1fafb7f996c8088763c4"
+    },
+    "distributed": {
+      "sha256": "e0561a13ca3c3d375914b81624b5bec1cbcdf6df5b0a37934154cdf83ef80706",
+      "bytes": 15356
+    },
+    "kind": "public derivative"
+  },
+  "evidence/engine/review.json": {
+    "original": {
+      "bytes": 1819,
+      "sha256": "e046a22014d544a64566606bd6e82a20c9e9c43cc8f5888081ca7dcd1ee0c107"
+    },
+    "distributed": {
+      "sha256": "fd59a41b03cace75b6a726f29922dbf0dae70f5e7d5fb44244ca41d53f73eeb6",
+      "bytes": 1760
+    },
+    "kind": "public derivative"
+  },
+  "evidence/engine/warnings-review.md": {
+    "original": {
+      "bytes": 3363,
+      "sha256": "4299429859ef021c68d2e11b3cd04db02e18725c0ab5ed1b10a92e5e22ab9179"
+    },
+    "distributed": {
+      "sha256": "8ce19a98e5700423843d329eed8b3101bed21c76e99ec996703af9755a2dde41",
+      "bytes": 3497
+    },
+    "kind": "public derivative"
+  },
+  "evidence/oxygen/action-boundary.json": {
+    "original": {
+      "bytes": 1975,
+      "sha256": "56463fafa3f2602a36393ebeee0ec54d8ff8862e37a937665243d9e28d20031b"
+    },
+    "distributed": {
+      "sha256": "56463fafa3f2602a36393ebeee0ec54d8ff8862e37a937665243d9e28d20031b",
+      "bytes": 1975
+    },
+    "kind": "original bytes"
+  },
+  "evidence/oxygen/annotated-state.md": {
+    "original": {
+      "bytes": 11957,
+      "sha256": "0336df49b38dfe22bd49502d1c89502043e09f0b83d48ca7294261d6ca5830c4"
+    },
+    "distributed": {
+      "sha256": "ed778b49b635d8f83443dd14028684eab1d00f32a089b8cd03296cb8a262c8d9",
+      "bytes": 5694
+    },
+    "kind": "public derivative"
+  },
+  "evidence/oxygen/checks.json": {
+    "original": {
+      "bytes": 4337,
+      "sha256": "8ad0525b9957f1b3ba502072cc1b8b618a4d9b0e94ada2bae69a8028e11b1881"
+    },
+    "distributed": {
+      "sha256": "dcd92ed3106d34946f50ffc7637e65cd0c3dc55171051b05d7bb109ad12d6fde",
+      "bytes": 4438
+    },
+    "kind": "public derivative"
+  },
+  "evidence/oxygen/field-map.json": {
+    "original": {
+      "bytes": 12692,
+      "sha256": "f02c146dc64c080cced45532ddb9ef4eb2381ae99e2ab077709eb78e111963a9"
+    },
+    "distributed": {
+      "sha256": "f02c146dc64c080cced45532ddb9ef4eb2381ae99e2ab077709eb78e111963a9",
+      "bytes": 12692
+    },
+    "kind": "original bytes"
+  },
+  "evidence/oxygen/lesson-data.json": {
+    "original": {
+      "bytes": 767147,
+      "sha256": "75f0746995b10d960223dffe90de8fce9c8f5e82916c890a818c6e2ceeab0802"
+    },
+    "distributed": {
+      "sha256": "0c364167254fdf541f9946756920a9bc79cd98f09f732bf8f01a520df5fe9cb3",
+      "bytes": 767163
+    },
+    "kind": "public derivative"
+  },
+  "evidence/oxygen/manifest.json": {
+    "original": {
+      "bytes": 49814,
+      "sha256": "d406186df96c8bcf3fc4bf11566ab1fdc43ce46add22ebfff0b671e1cf473daf"
+    },
+    "distributed": {
+      "sha256": "2558fc2e98c8a3bdad9bea34f474f2021d38c1ed336f82d22e5d0d40eb7a2142",
+      "bytes": 22562
+    },
+    "kind": "public derivative"
+  },
+  "evidence/oxygen/review.json": {
+    "original": {
+      "bytes": 3785,
+      "sha256": "38720be2da0bd1dfbcc1d0783141e88664b2cc81e82b78cedbb9c77176831384"
+    },
+    "distributed": {
+      "sha256": "8bc11a901aa99cc605caca313e2376eb723fd40e6fa2079bb54db54be56102a6",
+      "bytes": 2617
+    },
+    "kind": "public derivative"
+  },
+  "evidence/oxygen/warnings-review.md": {
+    "original": {
+      "bytes": 3918,
+      "sha256": "93e429f807afbe7681193e7189c82a63aa1d7458fc9e6d4d3e0fe0143bae8d15"
+    },
+    "distributed": {
+      "sha256": "832a34b3375c249083f67dc6b6a0c2a252d96a04e43205a39859e199302dc18d",
+      "bytes": 3385
+    },
+    "kind": "public derivative"
+  },
+  "evidence/respiratory/annotated-state.md": {
+    "original": {
+      "bytes": 9324,
+      "sha256": "21e4f0c409021bc5b3f1eeff80fe7b0afdea0c5b704207852de9674d85d57909"
+    },
+    "distributed": {
+      "sha256": "0c862e7ae7c7ea8668615b786d34401bc25759af5c171ac02fe5a8e5e40397f3",
+      "bytes": 9347
+    },
+    "kind": "public derivative"
+  },
+  "evidence/respiratory/checks.json": {
+    "original": {
+      "bytes": 71159,
+      "sha256": "9f6ebcc4538234bf3ee34963a4abfb6136d4fdc0eb1231ff2a30a30477ada71f"
+    },
+    "distributed": {
+      "sha256": "9f6ebcc4538234bf3ee34963a4abfb6136d4fdc0eb1231ff2a30a30477ada71f",
+      "bytes": 71159
+    },
+    "kind": "original bytes"
+  },
+  "evidence/respiratory/field-map.json": {
+    "original": {
+      "bytes": 14091,
+      "sha256": "572e83dbfdcab5a5eca545f4029c00ec569110eedbbc56ab99757b560b8d6d15"
+    },
+    "distributed": {
+      "sha256": "ba67120d4f6f97f347dd3f6c9263775ab7212065b9dfd4f6ec11768c15688a55",
+      "bytes": 14169
+    },
+    "kind": "public derivative"
+  },
+  "evidence/respiratory/manifest.json": {
+    "original": {
+      "bytes": 1005726,
+      "sha256": "b5701951cab12d257e6c88099ab6418a368bc202b51804b7bb6f0b9508da729a"
+    },
+    "distributed": {
+      "sha256": "4102cacab2da068d01f31185a830ac84cb29e161a02000d9afa41a8c75f4a94a",
+      "bytes": 40465
+    },
+    "kind": "public derivative"
+  },
+  "evidence/respiratory/review.json": {
+    "original": {
+      "bytes": 3142,
+      "sha256": "d723c7f305523dd0f6af78b0819e52758c524b414da01d61a869cda40fb3f213"
+    },
+    "distributed": {
+      "sha256": "521be82cb1175ea12791e6c299948fde5c074626ed1d2ccc800ea4617009e5ac",
+      "bytes": 2943
+    },
+    "kind": "public derivative"
+  },
+  "evidence/respiratory/warnings-review.md": {
+    "original": {
+      "bytes": 4162,
+      "sha256": "e7fc4ed9eb29748aade24b4510a50db33ecb70fe943be8256e224ad59e4b276b"
+    },
+    "distributed": {
+      "sha256": "25a54edbcf57c5f88cb99afded8e6b3933a914a8506dfd4f2cd4e46b8968bf67",
+      "bytes": 1668
+    },
+    "kind": "public derivative"
+  },
+  "evidence/ui/respiratory/playback.json": {
+    "original": {
+      "bytes": 6100431,
+      "sha256": "f0e9746f3633d8e12eac310249718bc1e47808f557694ebbd14c9e17db1d8ee6"
+    },
+    "distributed": {
+      "sha256": "f0e9746f3633d8e12eac310249718bc1e47808f557694ebbd14c9e17db1d8ee6",
+      "bytes": 6100431
+    },
+    "kind": "original bytes"
+  }
+}

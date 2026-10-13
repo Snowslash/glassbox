@@ -1,0 +1,25 @@
+// Fixed public derivative identities, frozen by the export recipe.
+export const publicationPins = Object.freeze({
+  "engine/field-map.json": "3b518dc613971a64b56177449935c3144ab1989d673b0cc0b31023681b979a30",
+  "evidence/engine/annotated-state.md": "1e6175d508666b8ea23dcde820224a9ccbaf2c2264bae7a5955e9ecb66b3b8c0",
+  "evidence/engine/checks.json": "d4d96307309d043690ffb8ac252079188a13942c80d9360c9600317946e8b281",
+  "evidence/engine/lesson-data.json": "69916dc8742dc7b7fad69302017b5952203d4c9bb2d9590dfa004b0e12a20ea1",
+  "evidence/engine/manifest.json": "e0561a13ca3c3d375914b81624b5bec1cbcdf6df5b0a37934154cdf83ef80706",
+  "evidence/engine/review.json": "fd59a41b03cace75b6a726f29922dbf0dae70f5e7d5fb44244ca41d53f73eeb6",
+  "evidence/engine/warnings-review.md": "8ce19a98e5700423843d329eed8b3101bed21c76e99ec996703af9755a2dde41",
+  "evidence/oxygen/action-boundary.json": "56463fafa3f2602a36393ebeee0ec54d8ff8862e37a937665243d9e28d20031b",
+  "evidence/oxygen/annotated-state.md": "ed778b49b635d8f83443dd14028684eab1d00f32a089b8cd03296cb8a262c8d9",
+  "evidence/oxygen/checks.json": "dcd92ed3106d34946f50ffc7637e65cd0c3dc55171051b05d7bb109ad12d6fde",
+  "evidence/oxygen/field-map.json": "f02c146dc64c080cced45532ddb9ef4eb2381ae99e2ab077709eb78e111963a9",
+  "evidence/oxygen/lesson-data.json": "0c364167254fdf541f9946756920a9bc79cd98f09f732bf8f01a520df5fe9cb3",
+  "evidence/oxygen/manifest.json": "2558fc2e98c8a3bdad9bea34f474f2021d38c1ed336f82d22e5d0d40eb7a2142",
+  "evidence/oxygen/review.json": "8bc11a901aa99cc605caca313e2376eb723fd40e6fa2079bb54db54be56102a6",
+  "evidence/oxygen/warnings-review.md": "832a34b3375c249083f67dc6b6a0c2a252d96a04e43205a39859e199302dc18d",
+  "evidence/respiratory/annotated-state.md": "0c862e7ae7c7ea8668615b786d34401bc25759af5c171ac02fe5a8e5e40397f3",
+  "evidence/respiratory/checks.json": "9f6ebcc4538234bf3ee34963a4abfb6136d4fdc0eb1231ff2a30a30477ada71f",
+  "evidence/respiratory/field-map.json": "ba67120d4f6f97f347dd3f6c9263775ab7212065b9dfd4f6ec11768c15688a55",
+  "evidence/respiratory/manifest.json": "4102cacab2da068d01f31185a830ac84cb29e161a02000d9afa41a8c75f4a94a",
+  "evidence/respiratory/review.json": "521be82cb1175ea12791e6c299948fde5c074626ed1d2ccc800ea4617009e5ac",
+  "evidence/respiratory/warnings-review.md": "25a54edbcf57c5f88cb99afded8e6b3933a914a8506dfd4f2cd4e46b8968bf67",
+  "evidence/ui/respiratory/playback.json": "f0e9746f3633d8e12eac310249718bc1e47808f557694ebbd14c9e17db1d8ee6"
+});
