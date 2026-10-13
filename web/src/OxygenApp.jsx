@@ -2,8 +2,9 @@ import React,{useEffect,useState} from 'react';
 import {PublicEstateHeader,EstateShell,EstatePageTitle,useEstateTheme} from '@sangeev/estate-ui';
 import {validateData,validateGate,approved,initialState,transition,selectFrame,fields,labels,units,display,figure,geometry,linePath,readRoute,modelHref} from './oxygen-model.mjs';
 import {sha256} from './oxygen-sha256.mjs';
+import {isModelRoute} from './model-route.mjs';
 const stages=['Predict','Watch','Look closer','Compare','Explain'];
-const technical=()=>location.pathname.endsWith('/oxygen-model.html');
+const technical=()=>isModelRoute(location.pathname,'oxygen-model');
 export function OxygenApp(){
  const {theme,toggleTheme}=useEstateTheme();const[data,setData]=useState(null),[error,setError]=useState(''),[attempt,setAttempt]=useState(0),[state,setState]=useState(initialState),[model,setModel]=useState(technical),[snapshot,setSnapshot]=useState(()=>readRoute(location.search));
  const dispatch=a=>setState(s=>transition(s,a,data));

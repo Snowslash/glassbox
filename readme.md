@@ -20,7 +20,7 @@ The experiments use fictional scenarios recorded with the Pulse physiology simul
 
 ## Find out more
 
-[How the lab works](docs/architecture.md) · [Where the recordings come from](docs/provenance.md)
+[How the lab works](docs/architecture.md) · [Where the recordings come from](docs/provenance.md) · [Deployment guide](docs/deployment.md)
 
 ## Licence
 

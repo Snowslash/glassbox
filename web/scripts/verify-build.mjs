@@ -1,6 +1,7 @@
 import {readFile,readdir} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {resolve} from 'node:path';
+import {verifyDeployment} from './deployment-contract.mjs';
 const hash=b=>createHash('sha256').update(b).digest('hex');
 const root=resolve(import.meta.dirname,'..');
 const p=JSON.parse(await readFile(resolve(root,'dist/evidence/build-provenance.json')));
@@ -22,3 +23,4 @@ console.log('Production artifact: nine HTML routes, 6 pressure, 8 oxygen and 7 r
 for(const file of await readdir(resolve(root,'../licenses')))if(hash(await readFile(resolve(root,'../licenses',file)))!==hash(await readFile(resolve(root,'dist/licenses',file))))throw Error('Licence mismatch: '+file);
 if(hash(await readFile(resolve(root,'../LICENSE')))!==hash(await readFile(resolve(root,'dist/licenses/Glassbox-LICENSE'))))throw Error('Glassbox licence mismatch');
 console.log('All distributed third-party licence bytes and Glassbox MIT text verified.');
+console.log('Deployment artifacts verified:',await verifyDeployment(file=>readFile(resolve(root,'dist',file),'utf8')));

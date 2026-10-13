@@ -2,8 +2,9 @@ import React,{useEffect,useState} from 'react';
 import {PublicEstateHeader,EstateShell,EstatePageTitle,useEstateTheme} from '@sangeev/estate-ui';
 import {sha256} from './oxygen-sha256.mjs';
 import {branches,labels,columns,approved,validateGate,validateData,initialState,transition,displayIndex,showOutcome,breathRange,axes,geometry,filling,readRoute,modelHref} from './respiratory-model.mjs';
+import {isModelRoute} from './model-route.mjs';
 const stages=['Predict','Watch','Look closer','Compare','Explain'];
-const technical=()=>location.pathname.endsWith('/respiratory-model.html');
+const technical=()=>isModelRoute(location.pathname,'respiratory-model');
 export function RespiratoryApp(){
  const {theme,toggleTheme}=useEstateTheme();const [data,setData]=useState(null),[mapping,setMapping]=useState(null),[error,setError]=useState(''),[attempt,setAttempt]=useState(0),[state,setState]=useState(initialState),[model,setModel]=useState(technical),[snapshot,setSnapshot]=useState(()=>readRoute(location.search));
  const dispatch=a=>setState(s=>transition(s,a));

@@ -1,6 +1,7 @@
 import {initialState,compartments,traceFields} from './model.mjs';
+import {isModelRoute} from './model-route.mjs';
 const selections=[...compartments,'path','feedback'];
-export const isModelPath=pathname=>pathname.endsWith('/model.html');
+export const isModelPath=pathname=>isModelRoute(pathname,'model');
 export function modelHref(frame,state){
  const params=new URLSearchParams({sample:String(frame.index),compare:frame.control?'1':'0',selection:selections.includes(state.selection)?state.selection:'Aorta',trace:traceFields.includes(state.trace)?state.trace:traceFields[0]});
  return './model.html?'+params;

@@ -24,7 +24,7 @@ Build output and dependencies are excluded from the source distribution. The bui
 
 Change presentation in `web/src/`. Keep progressive traces, original values, time semantics, same-tab state and refusal/retry behaviour covered by tests. Do not repin modified evidence merely to make a failing integrity check pass: a new recording requires a separately reviewed native experiment, source mapping and provenance record.
 
-The original browser regression suites were exercised in the preparation environment, outside this portable package because their Linux resource instrumentation is host-specific. Automated Chromium checks do not establish cross-browser, screen-reader or learner validation. No CI deployment, repository URL or custom domain is supplied here. HTML retains the prototype noindex,nofollow directive; choose any public indexing policy separately when deploying.
+The original browser regression suites were exercised in the preparation environment, outside this portable package because their Linux resource instrumentation is host-specific. Automated Chromium checks do not establish cross-browser, screen-reader or learner validation. No website hosting or custom domain is configured by the source package. See the [deployment guide](deployment.md) for Cloudflare Pages settings and required hosted checks. HTML and the Pages response-header file deliberately retain noindex,nofollow; this is crawler guidance, not access control.
 
 ## Layout
 
