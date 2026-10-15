@@ -10,7 +10,7 @@ test('skip shortcuts have offscreen default and immediate focus reveal',()=>{
  assert.doesNotMatch(css,/\.skip-link[^}]*display:none/);
 });
 test('every project page has a focusable native skip destination',async()=>{
- for(const name of ['Landing.jsx','Lab.jsx','licences-main.jsx']){
+ for(const name of ['ProjectPage.tsx','Lab.jsx','licences-main.jsx']){
   const source=await readFile(new URL('../src/'+name,import.meta.url),'utf8');
   assert.match(source,/className="skip-link" href="#main-content"/);
   assert.match(source,/id="main-content" tabIndex=\{-1\}/);

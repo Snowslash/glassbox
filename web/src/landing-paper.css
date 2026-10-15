@@ -1,0 +1,3 @@
+/* Glassbox's policy allows images from this site only, so the paper grain is a file here, not an inline data image. */
+:root{--paper-grain:url("/images/paper-grain-light.svg")}
+[data-theme="dark"],.dark{--paper-grain:url("/images/paper-grain-dark.svg")}

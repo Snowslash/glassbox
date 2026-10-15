@@ -36,6 +36,11 @@ test('all lesson entrypoints use the shared route detector',{skip:!routes},async
 });
 test('deployment artifact verifier exists',()=>assert.ok(contract?.verifyDeployment));
 test('source headers, noindex policy and fallback satisfy deployment contract',{skip:!contract},async()=>{await contract.verifyDeployment(read);});
+test('deployment header verifier accepts LF and CRLF with identical policy',async()=>{
+ for(const eol of ['\n','\r\n'])await contract.verifyDeployment(async p=>{
+  const value=await read(p);return p==='_headers'?value.replace(/\r\n/g,'\n').replace(/\n/g,eol):value;
+ });
+});
 test('deployment contract rejects missing or weakened security and fallback files',{skip:!contract},async()=>{
  const bad=[['_headers',null],['_headers',s=>s.replace("script-src 'self'","script-src * 'unsafe-inline'")],['_headers',s=>s.replace("frame-ancestors 'none'","frame-ancestors *")],['_headers',s=>s.replace('X-Robots-Tag: noindex, nofollow','X-Robots-Tag: all')],['404.html',null],['404.html',s=>s.replace('href="/"','href="../"')],['404.html',s=>s.replace('</body>','<script src="/extra.js"></script></body>')],['app/oxygen-model.html',s=>s.replace('noindex,nofollow','index,follow')]];
  for(const [path,mutate]of bad)await assert.rejects(contract.verifyDeployment(async p=>{if(p!==path)return read(p);if(!mutate)throw Error('missing '+p);return mutate(await read(p));}),path);

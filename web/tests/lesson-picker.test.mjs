@@ -3,10 +3,10 @@ import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 const web=new URL('../',import.meta.url),text=p=>readFile(new URL(p,web),'utf8');
 test('landing opens the lesson chooser without replacing its evidence image',async()=>{
- const source=await text('src/Landing.jsx');
- assert.match(source,/id="start-lab"[^>]*href="\.\/lab\.html">Open lab/);
+ const source=await text('src/project.js');
+ assert.match(source,/actions:\[\{label:'Open the lab',href:'\.\/lab\.html'\}\]/);
  assert.match(source,/pressure-comparison\.png/);
- assert.match(await text('index.html'),/href="\.\/lab\.html">Open lab/);
+ assert.match(await text('index.html'),/href="\.\/lab\.html">Open the lab/);
 });
 test('chooser is a real static entrypoint with all three direct lesson links',async()=>{
  const html=await text('lab.html').catch(()=>''),view=await text('src/Lab.jsx').catch(()=>'');

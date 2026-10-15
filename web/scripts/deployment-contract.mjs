@@ -11,7 +11,7 @@ const required={
 };
 // Used against source in unit tests and the actual output directory after build.
 export async function verifyDeployment(read){
- const lines=(await read('_headers')).trimEnd().split('\n');
+ const lines=(await read('_headers')).trimEnd().split(/\r?\n/);
  assert.equal(lines.shift(),'/*','One global Pages header rule is required');
  const actual={};
  for(const line of lines){
