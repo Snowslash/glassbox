@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "parentUIApproved": true,
+  "evidenceType": "public-scientific-subset",
+  "engineCommit": "5e29e5b13710a08cec90874be7d36ecb192ebcda",
+  "nativeHashes": {
+    "manifest.json": {
+      "sha256": "64ea718337ed2f38177e1d3b76c77532c9163628c96797f94a64607ed3ec8421",
+      "bytes": 997834
+    },
+    "checks.json": {
+      "sha256": "34de8384b1676369489d91bae3a7033caa5ac737c75b23ccaeaed75739f10121",
+      "bytes": 27931
+    },
+    "protocol.json": {
+      "sha256": "d9cfb6cc609ef90d20a7793daded6eb28fc2b8887a73778eeda186c537f234cd",
+      "bytes": 3142
+    },
+    "field-map.json": {
+      "sha256": "ee8c7c20e32a9547a03fe1d454de665ceaae10b4460f62a286d468e05773d311",
+      "bytes": 96694
+    },
+    "lesson-data.json": {
+      "sha256": "9e091201f7708cbbc6d7b1e03f2aeea0c0f3772e28b03ed7d9b3396aa2776e2f",
+      "bytes": 7782514
+    }
+  },
+  "payloadSHA256": "9e091201f7708cbbc6d7b1e03f2aeea0c0f3772e28b03ed7d9b3396aa2776e2f",
+  "payloadBytes": 7782514,
+  "scope": "Recorded educational experiment; not clinical or learner validation. Raw engine, full CSV recordings and checkpoints are not distributed in this subset.",
+  "limitations": [
+    "RightHeart1 is lumped circuit storage, not anatomical ventricular volume",
+    "Applied support pressure uses tuned 0.4 coupling with solver lifecycle lag; not raw pericardial pressure",
+    "CVP is native vena-cava pressure, not MeanCentralVenousPressure",
+    "CO is native cycle-updated stroke-volume times heart-rate output; not instantaneous aortic flow",
+    "One-second trends and original 0.02-second PV rows; most recent completed cycle ends before/equal cursor, explicitly labelled",
+    "Blood-volume drift disclosed; no global-fluid conservation or clinical/learner validation claim"
+  ],
+  "sources": {
+    "cardiovascular": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/engine/common/system/physiology/CardiovascularModel.cpp",
+    "circuit": "https://gitlab.kitware.com/physiology/engine/-/blob/5e29e5b13710a08cec90874be7d36ecb192ebcda/src/cpp/cdm/circuit/SECircuitCalculator.cpp"
+  },
+  "excludedNativeIdentities": {
+    "control.csv": {
+      "sha256": "36710f0c5aa7a8623205615c0e716ae1498af017a84ae6435cecf0d88d4a1d44",
+      "bytes": 13362722
+    },
+    "effusion.csv": {
+      "sha256": "75a597ba4c11bb8501786b4fa923807a364825f4932d531afae008a822e7cb0a",
+      "bytes": 18919990
+    },
+    "repeat.csv": {
+      "sha256": "75a597ba4c11bb8501786b4fa923807a364825f4932d531afae008a822e7cb0a",
+      "bytes": 18919990
+    },
+    "restore.csv": {
+      "sha256": "d91239c71755510ee2938092837f3d17fd4550bfc552b6e7eb04739ab157c8c0",
+      "bytes": 9208029
+    },
+    "effusion.checkpoint.json": {
+      "sha256": "203745437e4fabfceb8fa847f521e8a4fa7f629e1a4d7cc07830a58a9ecaba05",
+      "bytes": 2503568
+    },
+    "baseline.json": {
+      "sha256": "359b50aca996fd7978653bf591b7b6a81db883b39bb6a196e2f9bf56dffb825e",
+      "bytes": 2504029
+    }
+  },
+  "publicChecks": "Numerical content preserved from native checks; serialized as a public JSON derivative (whitespace differs), pinned separately."
+}

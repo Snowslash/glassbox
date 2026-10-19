@@ -7,6 +7,7 @@ Glassbox is a browser-based lab for exploring how blood pressure, oxygen transpo
 - **Pressure is not volume**: follow blood loss and see why blood pressure alone does not tell you how much blood remains in circulation.
 - **Saturation is not delivery**: explore why oxygen saturation can stay high even when less oxygen reaches the tissues.
 - **Where does the breath go?**: see how breathing changes when airflow meets more resistance or the lungs are harder to expand.
+- **Pressure outside the heart**: inspect why higher venous pressure can coexist with less model-heart filling and lower output.
 
 ## Try the lab
 

@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-export const pages=['index.html','lab.html','licences.html','app/index.html','app/model.html','app/oxygen.html','app/oxygen-model.html','app/respiratory.html','app/respiratory-model.html','404.html'];
+export const pages=['index.html','lab.html','licences.html','app/index.html','app/model.html','app/oxygen.html','app/oxygen-model.html','app/respiratory.html','app/respiratory-model.html','app/pericardial.html','app/pericardial-model.html','404.html'];
 const csp="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'";
 const required={
  'content-security-policy':csp+"; frame-ancestors 'none'",

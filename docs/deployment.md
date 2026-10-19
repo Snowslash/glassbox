@@ -31,7 +31,7 @@ The Node version matches the locally checked build. The explicit install uses th
 
 ## Routing, fallback and security
 
-Pages redirects `.html` URLs to extensionless forms. All three Model details views recognise both forms; authored links keep their existing `.html` destinations and safe snapshot query parameters. Same-tab history navigation does not require a server redirect.
+Pages redirects `.html` URLs to extensionless forms. All four Model details views recognise both forms; authored links keep their existing `.html` destinations and safe snapshot query parameters. Same-tab history navigation does not require a server redirect.
 
 The build includes a real `404.html`, preventing Pages' implicit single-page-app fallback. It is script-free, uses the pinned estate stylesheet and has ordinary links home and to the chooser. Its links, stylesheet and favicon resolve from the domain root so it also works at deeply nested missing URLs. Its static dark appearance does not load the app's theme controller. Deploying below a URL subdirectory would need a separately checked URL change.
 
@@ -45,9 +45,9 @@ The build includes a real `404.html`, preventing Pages' implicit single-page-app
 
 Before announcing the generated Pages address or attaching a custom domain:
 
-- Verify all nine application entrypoints, including direct Model details URLs with and without `.html`.
+- Verify all eleven application entrypoints, including direct Model details URLs with and without `.html`.
 - Refresh a Model details page; check that the selected sample, return navigation and browser back/forward still work.
-- Exercise prediction, playback, seeking and comparisons in all three lessons.
+- Exercise prediction, playback, seeking and comparisons in all four lessons.
 - Inspect actual HTTPS response headers for the HTML, a recording and an unknown path. Confirm the CSP and indexing policy survived hosting.
 - Confirm a deeply nested unknown URL returns **HTTP 404**, with working styles, favicon, keyboard focus and recovery links. A missing recording must not become a successful landing-page response.
 - Check mobile layouts, both themes, skip links and browser console/network errors. Review any provider-injected scripts rather than weakening the CSP to accommodate them.

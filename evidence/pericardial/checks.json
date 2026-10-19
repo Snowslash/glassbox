@@ -1,0 +1,937 @@
+{
+  "status": "PASS",
+  "testsRun": 11,
+  "skipped": 0,
+  "failures": [],
+  "metrics": {
+    "control": {
+      "integratedPericardialInflow_mL": 0.0,
+      "pericardialVolumeChange_mL": 0.0,
+      "maxLedgerResidual_mL": 0.0,
+      "maxNormalizedResistorResidual": 1.6134477865544208e-16,
+      "rows": 31501,
+      "fields": 39,
+      "bloodVolumeChange_mL": 24.842417884268798
+    },
+    "effusion": {
+      "integratedPericardialInflow_mL": 499.9999999998739,
+      "pericardialVolumeChange_mL": 499.99999999969714,
+      "maxLedgerResidual_mL": 1.7678303265711293e-10,
+      "maxNormalizedResistorResidual": 1.613694833292016e-16,
+      "rows": 31501,
+      "fields": 39,
+      "bloodVolumeChange_mL": 24.981287129699012
+    },
+    "repeat": {
+      "integratedPericardialInflow_mL": 499.9999999998739,
+      "pericardialVolumeChange_mL": 499.99999999969714,
+      "maxLedgerResidual_mL": 1.7678303265711293e-10,
+      "maxNormalizedResistorResidual": 1.613694833292016e-16,
+      "rows": 31501,
+      "fields": 39,
+      "bloodVolumeChange_mL": 24.981287129699012
+    },
+    "restore": {
+      "integratedPericardialInflow_mL": 250.0000000000911,
+      "pericardialVolumeChange_mL": 249.99999999963416,
+      "maxLedgerResidual_mL": 4.5693582251260523e-10,
+      "maxNormalizedResistorResidual": 1.613694833292016e-16,
+      "rows": 15001,
+      "fields": 39,
+      "bloodVolumeChange_mL": 12.107032127616549
+    },
+    "comparison_repeat": {
+      "rows": 31501,
+      "numericFields": 38,
+      "maxToleranceFraction": 0.0
+    },
+    "comparison_restore": {
+      "rows": 15001,
+      "numericFields": 38,
+      "maxToleranceFraction": 0.010766278603827251
+    },
+    "teaching": {
+      "summary": {
+        "control": {
+          "CVP_mmHg": 4.738694610579019,
+          "CO_L_min": 5.744842820145938,
+          "Pericardium1_P_mmHg": 1.0,
+          "RightHeart3_P_mmHg": 3.4233343873965755e-16,
+          "filling_mL": 140.6502620539916,
+          "completeCycles": [
+            {
+              "id": 714,
+              "startIndex": 30005,
+              "endIndex": 30047,
+              "startStep": 30005,
+              "endStep": 30047,
+              "maxVolume_mL": 140.64003715883484
+            },
+            {
+              "id": 715,
+              "startIndex": 30047,
+              "endIndex": 30089,
+              "startStep": 30047,
+              "endStep": 30089,
+              "maxVolume_mL": 140.6596367290075
+            },
+            {
+              "id": 716,
+              "startIndex": 30089,
+              "endIndex": 30131,
+              "startStep": 30089,
+              "endStep": 30131,
+              "maxVolume_mL": 140.64849827298673
+            },
+            {
+              "id": 717,
+              "startIndex": 30131,
+              "endIndex": 30173,
+              "startStep": 30131,
+              "endStep": 30173,
+              "maxVolume_mL": 140.6277532500597
+            },
+            {
+              "id": 718,
+              "startIndex": 30173,
+              "endIndex": 30215,
+              "startStep": 30173,
+              "endStep": 30215,
+              "maxVolume_mL": 140.6093953160792
+            },
+            {
+              "id": 719,
+              "startIndex": 30215,
+              "endIndex": 30257,
+              "startStep": 30215,
+              "endStep": 30257,
+              "maxVolume_mL": 140.6254011162138
+            },
+            {
+              "id": 720,
+              "startIndex": 30257,
+              "endIndex": 30299,
+              "startStep": 30257,
+              "endStep": 30299,
+              "maxVolume_mL": 140.64717806957725
+            },
+            {
+              "id": 721,
+              "startIndex": 30299,
+              "endIndex": 30341,
+              "startStep": 30299,
+              "endStep": 30341,
+              "maxVolume_mL": 140.66623245028768
+            },
+            {
+              "id": 722,
+              "startIndex": 30341,
+              "endIndex": 30383,
+              "startStep": 30341,
+              "endStep": 30383,
+              "maxVolume_mL": 140.65361873592445
+            },
+            {
+              "id": 723,
+              "startIndex": 30383,
+              "endIndex": 30425,
+              "startStep": 30383,
+              "endStep": 30425,
+              "maxVolume_mL": 140.63289025852612
+            },
+            {
+              "id": 724,
+              "startIndex": 30425,
+              "endIndex": 30467,
+              "startStep": 30425,
+              "endStep": 30467,
+              "maxVolume_mL": 140.61526674945304
+            },
+            {
+              "id": 725,
+              "startIndex": 30467,
+              "endIndex": 30509,
+              "startStep": 30467,
+              "endStep": 30509,
+              "maxVolume_mL": 140.63258886544634
+            },
+            {
+              "id": 726,
+              "startIndex": 30509,
+              "endIndex": 30551,
+              "startStep": 30509,
+              "endStep": 30551,
+              "maxVolume_mL": 140.6543204512172
+            },
+            {
+              "id": 727,
+              "startIndex": 30551,
+              "endIndex": 30593,
+              "startStep": 30551,
+              "endStep": 30593,
+              "maxVolume_mL": 140.67268762387545
+            },
+            {
+              "id": 728,
+              "startIndex": 30593,
+              "endIndex": 30635,
+              "startStep": 30593,
+              "endStep": 30635,
+              "maxVolume_mL": 140.65874412460613
+            },
+            {
+              "id": 729,
+              "startIndex": 30635,
+              "endIndex": 30677,
+              "startStep": 30635,
+              "endStep": 30677,
+              "maxVolume_mL": 140.6380282520475
+            },
+            {
+              "id": 730,
+              "startIndex": 30677,
+              "endIndex": 30719,
+              "startStep": 30677,
+              "endStep": 30719,
+              "maxVolume_mL": 140.62127769903057
+            },
+            {
+              "id": 731,
+              "startIndex": 30719,
+              "endIndex": 30761,
+              "startStep": 30719,
+              "endStep": 30761,
+              "maxVolume_mL": 140.63978079069102
+            },
+            {
+              "id": 732,
+              "startIndex": 30761,
+              "endIndex": 30803,
+              "startStep": 30761,
+              "endStep": 30803,
+              "maxVolume_mL": 140.66146418900996
+            },
+            {
+              "id": 733,
+              "startIndex": 30803,
+              "endIndex": 30845,
+              "startStep": 30803,
+              "endStep": 30845,
+              "maxVolume_mL": 140.67900008436487
+            },
+            {
+              "id": 734,
+              "startIndex": 30845,
+              "endIndex": 30887,
+              "startStep": 30845,
+              "endStep": 30887,
+              "maxVolume_mL": 140.6638764635483
+            },
+            {
+              "id": 735,
+              "startIndex": 30887,
+              "endIndex": 30929,
+              "startStep": 30887,
+              "endStep": 30929,
+              "maxVolume_mL": 140.64316718319776
+            },
+            {
+              "id": 736,
+              "startIndex": 30929,
+              "endIndex": 30971,
+              "startStep": 30929,
+              "endStep": 30971,
+              "maxVolume_mL": 140.62744070389297
+            },
+            {
+              "id": 737,
+              "startIndex": 30971,
+              "endIndex": 31013,
+              "startStep": 30971,
+              "endStep": 31013,
+              "maxVolume_mL": 140.64697672108247
+            },
+            {
+              "id": 738,
+              "startIndex": 31013,
+              "endIndex": 31055,
+              "startStep": 31013,
+              "endStep": 31055,
+              "maxVolume_mL": 140.66860844879005
+            },
+            {
+              "id": 739,
+              "startIndex": 31055,
+              "endIndex": 31097,
+              "startStep": 31055,
+              "endStep": 31097,
+              "maxVolume_mL": 140.68517703504807
+            },
+            {
+              "id": 740,
+              "startIndex": 31097,
+              "endIndex": 31139,
+              "startStep": 31097,
+              "endStep": 31139,
+              "maxVolume_mL": 140.66901660475827
+            },
+            {
+              "id": 741,
+              "startIndex": 31139,
+              "endIndex": 31181,
+              "startStep": 31139,
+              "endStep": 31181,
+              "maxVolume_mL": 140.64830664095905
+            },
+            {
+              "id": 742,
+              "startIndex": 31181,
+              "endIndex": 31223,
+              "startStep": 31181,
+              "endStep": 31223,
+              "maxVolume_mL": 140.63376767291953
+            },
+            {
+              "id": 743,
+              "startIndex": 31223,
+              "endIndex": 31265,
+              "startStep": 31223,
+              "endStep": 31265,
+              "maxVolume_mL": 140.65417579717376
+            },
+            {
+              "id": 744,
+              "startIndex": 31265,
+              "endIndex": 31307,
+              "startStep": 31265,
+              "endStep": 31307,
+              "maxVolume_mL": 140.67575196301988
+            },
+            {
+              "id": 745,
+              "startIndex": 31307,
+              "endIndex": 31349,
+              "startStep": 31307,
+              "endStep": 31349,
+              "maxVolume_mL": 140.6912266600131
+            },
+            {
+              "id": 746,
+              "startIndex": 31349,
+              "endIndex": 31391,
+              "startStep": 31349,
+              "endStep": 31391,
+              "maxVolume_mL": 140.67416489576271
+            },
+            {
+              "id": 747,
+              "startIndex": 31391,
+              "endIndex": 31433,
+              "startStep": 31391,
+              "endStep": 31433,
+              "maxVolume_mL": 140.65344678945092
+            },
+            {
+              "id": 748,
+              "startIndex": 31433,
+              "endIndex": 31475,
+              "startStep": 31433,
+              "endStep": 31475,
+              "maxVolume_mL": 140.6402681228506
+            }
+          ],
+          "changeFromOwn30s": {
+            "CVP_mmHg": 0.008065989316313527,
+            "CO_L_min": -0.03428877414303333,
+            "Pericardium1_P_mmHg": 0.0,
+            "RightHeart3_P_mmHg": 3.392199495072629e-15
+          }
+        },
+        "effusion": {
+          "CVP_mmHg": 8.301593261133585,
+          "CO_L_min": 2.6709208900253114,
+          "Pericardium1_P_mmHg": 16.261448536617166,
+          "RightHeart3_P_mmHg": 6.503610165639148,
+          "filling_mL": 50.05724930220054,
+          "completeCycles": [
+            {
+              "id": 967,
+              "startIndex": 30012,
+              "endIndex": 30033,
+              "startStep": 30012,
+              "endStep": 30033,
+              "maxVolume_mL": 52.246601902255655
+            },
+            {
+              "id": 968,
+              "startIndex": 30033,
+              "endIndex": 30054,
+              "startStep": 30033,
+              "endStep": 30054,
+              "maxVolume_mL": 52.18956983280012
+            },
+            {
+              "id": 969,
+              "startIndex": 30054,
+              "endIndex": 30075,
+              "startStep": 30054,
+              "endStep": 30075,
+              "maxVolume_mL": 52.1329422695269
+            },
+            {
+              "id": 970,
+              "startIndex": 30075,
+              "endIndex": 30096,
+              "startStep": 30075,
+              "endStep": 30096,
+              "maxVolume_mL": 52.07610462604543
+            },
+            {
+              "id": 971,
+              "startIndex": 30096,
+              "endIndex": 30117,
+              "startStep": 30096,
+              "endStep": 30117,
+              "maxVolume_mL": 52.01897104798956
+            },
+            {
+              "id": 972,
+              "startIndex": 30117,
+              "endIndex": 30138,
+              "startStep": 30117,
+              "endStep": 30138,
+              "maxVolume_mL": 51.961515638045725
+            },
+            {
+              "id": 973,
+              "startIndex": 30138,
+              "endIndex": 30159,
+              "startStep": 30138,
+              "endStep": 30159,
+              "maxVolume_mL": 51.903587282197364
+            },
+            {
+              "id": 974,
+              "startIndex": 30159,
+              "endIndex": 30180,
+              "startStep": 30159,
+              "endStep": 30180,
+              "maxVolume_mL": 51.84192353019237
+            },
+            {
+              "id": 975,
+              "startIndex": 30180,
+              "endIndex": 30201,
+              "startStep": 30180,
+              "endStep": 30201,
+              "maxVolume_mL": 51.77726208603413
+            },
+            {
+              "id": 976,
+              "startIndex": 30201,
+              "endIndex": 30222,
+              "startStep": 30201,
+              "endStep": 30222,
+              "maxVolume_mL": 51.711701422806485
+            },
+            {
+              "id": 977,
+              "startIndex": 30222,
+              "endIndex": 30243,
+              "startStep": 30222,
+              "endStep": 30243,
+              "maxVolume_mL": 51.646006900681996
+            },
+            {
+              "id": 978,
+              "startIndex": 30243,
+              "endIndex": 30264,
+              "startStep": 30243,
+              "endStep": 30264,
+              "maxVolume_mL": 51.580164401946945
+            },
+            {
+              "id": 979,
+              "startIndex": 30264,
+              "endIndex": 30285,
+              "startStep": 30264,
+              "endStep": 30285,
+              "maxVolume_mL": 51.51492958267329
+            },
+            {
+              "id": 980,
+              "startIndex": 30285,
+              "endIndex": 30306,
+              "startStep": 30285,
+              "endStep": 30306,
+              "maxVolume_mL": 51.45300659809837
+            },
+            {
+              "id": 981,
+              "startIndex": 30306,
+              "endIndex": 30327,
+              "startStep": 30306,
+              "endStep": 30327,
+              "maxVolume_mL": 51.39424907082059
+            },
+            {
+              "id": 982,
+              "startIndex": 30327,
+              "endIndex": 30348,
+              "startStep": 30327,
+              "endStep": 30348,
+              "maxVolume_mL": 51.3355178921732
+            },
+            {
+              "id": 983,
+              "startIndex": 30348,
+              "endIndex": 30369,
+              "startStep": 30348,
+              "endStep": 30369,
+              "maxVolume_mL": 51.2765420129042
+            },
+            {
+              "id": 984,
+              "startIndex": 30369,
+              "endIndex": 30390,
+              "startStep": 30369,
+              "endStep": 30390,
+              "maxVolume_mL": 51.21726837830998
+            },
+            {
+              "id": 985,
+              "startIndex": 30390,
+              "endIndex": 30411,
+              "startStep": 30390,
+              "endStep": 30411,
+              "maxVolume_mL": 51.1576765610944
+            },
+            {
+              "id": 986,
+              "startIndex": 30411,
+              "endIndex": 30432,
+              "startStep": 30411,
+              "endStep": 30432,
+              "maxVolume_mL": 51.09703003722261
+            },
+            {
+              "id": 987,
+              "startIndex": 30432,
+              "endIndex": 30453,
+              "startStep": 30432,
+              "endStep": 30453,
+              "maxVolume_mL": 51.03234073068721
+            },
+            {
+              "id": 988,
+              "startIndex": 30453,
+              "endIndex": 30474,
+              "startStep": 30453,
+              "endStep": 30474,
+              "maxVolume_mL": 50.965373860640845
+            },
+            {
+              "id": 989,
+              "startIndex": 30474,
+              "endIndex": 30495,
+              "startStep": 30474,
+              "endStep": 30495,
+              "maxVolume_mL": 50.8978709476896
+            },
+            {
+              "id": 990,
+              "startIndex": 30495,
+              "endIndex": 30516,
+              "startStep": 30495,
+              "endStep": 30516,
+              "maxVolume_mL": 50.830247207706044
+            },
+            {
+              "id": 991,
+              "startIndex": 30516,
+              "endIndex": 30537,
+              "startStep": 30516,
+              "endStep": 30537,
+              "maxVolume_mL": 50.762539611147965
+            },
+            {
+              "id": 992,
+              "startIndex": 30537,
+              "endIndex": 30558,
+              "startStep": 30537,
+              "endStep": 30558,
+              "maxVolume_mL": 50.69595770495958
+            },
+            {
+              "id": 993,
+              "startIndex": 30558,
+              "endIndex": 30579,
+              "startStep": 30558,
+              "endStep": 30579,
+              "maxVolume_mL": 50.63337815953328
+            },
+            {
+              "id": 994,
+              "startIndex": 30579,
+              "endIndex": 30600,
+              "startStep": 30579,
+              "endStep": 30600,
+              "maxVolume_mL": 50.57260468028554
+            },
+            {
+              "id": 995,
+              "startIndex": 30600,
+              "endIndex": 30621,
+              "startStep": 30600,
+              "endStep": 30621,
+              "maxVolume_mL": 50.51174197380117
+            },
+            {
+              "id": 996,
+              "startIndex": 30621,
+              "endIndex": 30642,
+              "startStep": 30621,
+              "endStep": 30642,
+              "maxVolume_mL": 50.45061279620492
+            },
+            {
+              "id": 997,
+              "startIndex": 30642,
+              "endIndex": 30663,
+              "startStep": 30642,
+              "endStep": 30663,
+              "maxVolume_mL": 50.389175278656644
+            },
+            {
+              "id": 998,
+              "startIndex": 30663,
+              "endIndex": 30684,
+              "startStep": 30663,
+              "endStep": 30684,
+              "maxVolume_mL": 50.327440600940044
+            },
+            {
+              "id": 999,
+              "startIndex": 30684,
+              "endIndex": 30705,
+              "startStep": 30684,
+              "endStep": 30705,
+              "maxVolume_mL": 50.26387175166371
+            },
+            {
+              "id": 1000,
+              "startIndex": 30705,
+              "endIndex": 30726,
+              "startStep": 30705,
+              "endStep": 30726,
+              "maxVolume_mL": 50.19645506738987
+            },
+            {
+              "id": 1001,
+              "startIndex": 30726,
+              "endIndex": 30747,
+              "startStep": 30726,
+              "endStep": 30747,
+              "maxVolume_mL": 50.12730293904395
+            },
+            {
+              "id": 1002,
+              "startIndex": 30747,
+              "endIndex": 30768,
+              "startStep": 30747,
+              "endStep": 30768,
+              "maxVolume_mL": 50.0578092753201
+            },
+            {
+              "id": 1003,
+              "startIndex": 30768,
+              "endIndex": 30789,
+              "startStep": 30768,
+              "endStep": 30789,
+              "maxVolume_mL": 49.98817532476207
+            },
+            {
+              "id": 1004,
+              "startIndex": 30789,
+              "endIndex": 30810,
+              "startStep": 30789,
+              "endStep": 30810,
+              "maxVolume_mL": 49.918574844686084
+            },
+            {
+              "id": 1005,
+              "startIndex": 30810,
+              "endIndex": 30831,
+              "startStep": 30810,
+              "endStep": 30831,
+              "maxVolume_mL": 49.85061681616652
+            },
+            {
+              "id": 1006,
+              "startIndex": 30831,
+              "endIndex": 30852,
+              "startStep": 30831,
+              "endStep": 30852,
+              "maxVolume_mL": 49.78677067399507
+            },
+            {
+              "id": 1007,
+              "startIndex": 30852,
+              "endIndex": 30873,
+              "startStep": 30852,
+              "endStep": 30873,
+              "maxVolume_mL": 49.72383616647917
+            },
+            {
+              "id": 1008,
+              "startIndex": 30873,
+              "endIndex": 30894,
+              "startStep": 30873,
+              "endStep": 30894,
+              "maxVolume_mL": 49.660742379832975
+            },
+            {
+              "id": 1009,
+              "startIndex": 30894,
+              "endIndex": 30915,
+              "startStep": 30894,
+              "endStep": 30915,
+              "maxVolume_mL": 49.5973634582103
+            },
+            {
+              "id": 1010,
+              "startIndex": 30915,
+              "endIndex": 30936,
+              "startStep": 30915,
+              "endStep": 30936,
+              "maxVolume_mL": 49.53366565484821
+            },
+            {
+              "id": 1011,
+              "startIndex": 30936,
+              "endIndex": 30957,
+              "startStep": 30936,
+              "endStep": 30957,
+              "maxVolume_mL": 49.46968538862228
+            },
+            {
+              "id": 1012,
+              "startIndex": 30957,
+              "endIndex": 30978,
+              "startStep": 30957,
+              "endStep": 30978,
+              "maxVolume_mL": 49.40314692280448
+            },
+            {
+              "id": 1013,
+              "startIndex": 30978,
+              "endIndex": 30999,
+              "startStep": 30978,
+              "endStep": 30999,
+              "maxVolume_mL": 49.3331543377634
+            },
+            {
+              "id": 1014,
+              "startIndex": 30999,
+              "endIndex": 31020,
+              "startStep": 30999,
+              "endStep": 31020,
+              "maxVolume_mL": 49.26181110401037
+            },
+            {
+              "id": 1015,
+              "startIndex": 31020,
+              "endIndex": 31041,
+              "startStep": 31020,
+              "endStep": 31041,
+              "maxVolume_mL": 49.19022274558185
+            },
+            {
+              "id": 1016,
+              "startIndex": 31041,
+              "endIndex": 31062,
+              "startStep": 31041,
+              "endStep": 31062,
+              "maxVolume_mL": 49.118476891579796
+            },
+            {
+              "id": 1017,
+              "startIndex": 31062,
+              "endIndex": 31083,
+              "startStep": 31062,
+              "endStep": 31083,
+              "maxVolume_mL": 49.046907304512224
+            },
+            {
+              "id": 1018,
+              "startIndex": 31083,
+              "endIndex": 31104,
+              "startStep": 31083,
+              "endStep": 31104,
+              "maxVolume_mL": 48.97742292346654
+            },
+            {
+              "id": 1019,
+              "startIndex": 31104,
+              "endIndex": 31125,
+              "startStep": 31104,
+              "endStep": 31125,
+              "maxVolume_mL": 48.91178648140154
+            },
+            {
+              "id": 1020,
+              "startIndex": 31125,
+              "endIndex": 31146,
+              "startStep": 31125,
+              "endStep": 31146,
+              "maxVolume_mL": 48.84656580461357
+            },
+            {
+              "id": 1021,
+              "startIndex": 31146,
+              "endIndex": 31167,
+              "startStep": 31146,
+              "endStep": 31167,
+              "maxVolume_mL": 48.78113212737824
+            },
+            {
+              "id": 1022,
+              "startIndex": 31167,
+              "endIndex": 31188,
+              "startStep": 31167,
+              "endStep": 31188,
+              "maxVolume_mL": 48.71539793185909
+            },
+            {
+              "id": 1023,
+              "startIndex": 31188,
+              "endIndex": 31209,
+              "startStep": 31188,
+              "endStep": 31209,
+              "maxVolume_mL": 48.64933605897786
+            },
+            {
+              "id": 1024,
+              "startIndex": 31209,
+              "endIndex": 31230,
+              "startStep": 31209,
+              "endStep": 31230,
+              "maxVolume_mL": 48.582944991165014
+            },
+            {
+              "id": 1025,
+              "startIndex": 31230,
+              "endIndex": 31251,
+              "startStep": 31230,
+              "endStep": 31251,
+              "maxVolume_mL": 48.51354081324341
+            },
+            {
+              "id": 1026,
+              "startIndex": 31251,
+              "endIndex": 31272,
+              "startStep": 31251,
+              "endStep": 31272,
+              "maxVolume_mL": 48.44105198803411
+            },
+            {
+              "id": 1027,
+              "startIndex": 31272,
+              "endIndex": 31293,
+              "startStep": 31272,
+              "endStep": 31293,
+              "maxVolume_mL": 48.36746388043057
+            },
+            {
+              "id": 1028,
+              "startIndex": 31293,
+              "endIndex": 31314,
+              "startStep": 31293,
+              "endStep": 31314,
+              "maxVolume_mL": 48.293672873789035
+            },
+            {
+              "id": 1029,
+              "startIndex": 31314,
+              "endIndex": 31335,
+              "startStep": 31314,
+              "endStep": 31335,
+              "maxVolume_mL": 48.21971757020969
+            },
+            {
+              "id": 1030,
+              "startIndex": 31335,
+              "endIndex": 31356,
+              "startStep": 31335,
+              "endStep": 31356,
+              "maxVolume_mL": 48.14607016618504
+            },
+            {
+              "id": 1031,
+              "startIndex": 31356,
+              "endIndex": 31377,
+              "startStep": 31356,
+              "endStep": 31377,
+              "maxVolume_mL": 48.074825339534925
+            },
+            {
+              "id": 1032,
+              "startIndex": 31377,
+              "endIndex": 31398,
+              "startStep": 31377,
+              "endStep": 31398,
+              "maxVolume_mL": 48.00702978986278
+            },
+            {
+              "id": 1033,
+              "startIndex": 31398,
+              "endIndex": 31419,
+              "startStep": 31398,
+              "endStep": 31419,
+              "maxVolume_mL": 47.939397001972196
+            },
+            {
+              "id": 1034,
+              "startIndex": 31419,
+              "endIndex": 31440,
+              "startStep": 31419,
+              "endStep": 31440,
+              "maxVolume_mL": 47.87151863008375
+            },
+            {
+              "id": 1035,
+              "startIndex": 31440,
+              "endIndex": 31461,
+              "startStep": 31440,
+              "endStep": 31461,
+              "maxVolume_mL": 47.8033287448288
+            },
+            {
+              "id": 1036,
+              "startIndex": 31461,
+              "endIndex": 31482,
+              "startStep": 31461,
+              "endStep": 31482,
+              "maxVolume_mL": 47.73480436365731
+            }
+          ],
+          "changeFromOwn30s": {
+            "CVP_mmHg": 3.570964639870879,
+            "CO_L_min": -3.10821070426366,
+            "Pericardium1_P_mmHg": 15.261448536617166,
+            "RightHeart3_P_mmHg": 6.5036101656391505
+          }
+        }
+      },
+      "deltas": {
+        "CVP_mmHg": 3.5628986505545654,
+        "CO_L_min": -3.0739219301206266,
+        "Pericardium1_P_mmHg": 15.261448536617166,
+        "RightHeart3_P_mmHg": 6.503610165639148,
+        "filling_mL": -90.59301275179106
+      }
+    }
+  },
+  "rtol": 1e-06,
+  "atol": 1e-08
+}

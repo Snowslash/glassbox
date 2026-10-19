@@ -1,6 +1,6 @@
 # Recordings and provenance
 
-All three fictional experiments use Pulse REL_4_4_0, commit `5e29e5b13710a08cec90874be7d36ecb192ebcda`, source-archive SHA-256 `5c1a9a020a8eda32f3a9a2b23c0591593355c1f07887ff2fe39bd3f65d5efa50`.
+All four fictional experiments use Pulse REL_4_4_0, commit `5e29e5b13710a08cec90874be7d36ecb192ebcda`, source-archive SHA-256 `5c1a9a020a8eda32f3a9a2b23c0591593355c1f07887ff2fe39bd3f65d5efa50`.
 
 This distribution reproduces the recorded frontend, not the native authoring environment. Raw CSVs, full checkpoints, executables, source/build trees, dependencies and native generators are excluded. Historical native repeat/restart results are reported, not rerun by `npm test`. Manifests distinguish included artifacts from historical identities; an excluded artifact name is an identity, not a usable download link.
 
@@ -23,6 +23,16 @@ The action-manager collection omits pending AcuteAnemia serialization at this co
 The unchanged projection retains all 18,003 original rows with 21 fields at 0.02 s. Its historical native bundle hash is `a7c9b859287b38dfb4d8026f1119c45b12916c829763675bb164bdf6bc5702a3`. All 90 named checks remain present and positive approval remains required. Both perturbations repeated and continued exactly across numeric/discrete channels.
 
 Restore materializes source-defined identity multipliers; effective settings and continuation remain exact, not full action-JSON shape. The initial already-inspiring fragment is excluded only from complete-breath summaries; all rows remain. Each branch has 23 complete breaths. Lower compliance changes resting volume, so comparison retains absolute volumes. Dynamic tidal and breathing-input trajectories are not forced spirometry or static-compliance tests.
+
+## Pressure outside the heart
+
+The full 7,782,514-byte projected payload is unchanged: SHA-256 `9e091201f7708cbbc6d7b1e03f2aeea0c0f3772e28b03ed7d9b3396aa2776e2f`. Each branch has 631 original 1-second trend selections with all 39 fields and 31,501 original 0.02-second pressure–volume rows with seven fields. There is no interpolation. Native rising-edge boundaries identify 749 control and 1,037 effusion complete cycles; the cursor map selects only the latest completed interval.
+
+Eleven scientific checks and independent projection/cycle verification passed before this integration. One effusion input at 50 mL/min starts after the 30 s row; recording ends at 630 s. Whole-body feedback remains active. The final 600–630 s means and repeat/restore results are retained in the public numerical checks. Blood-volume drift and Tachycardia/Antidiuresis events remain disclosed in the lesson and model page.
+
+RightHeart1 is lumped circuit storage, not anatomical ventricular volume. Applied support pressure is RightHeart3, not raw Pericardium1 pressure; the tuned 0.4 coupling has a two-row Current lag. The observed relationship is not clinical validation or an isolated compliance experiment.
+
+[Scientific approval](../evidence/pericardial/approval.json) identifies excluded native recordings/checkpoints by hashes, the pinned implementation and the exact parent-approved payload. Approval is public-facing derived metadata, not a redistributed private review log. Numerical checks preserve the native JSON content with different whitespace. No raw CSVs, checkpoints or native engine are included.
 
 ## Distribution rights
 

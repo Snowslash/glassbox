@@ -6,6 +6,7 @@ import {resolve,dirname} from 'node:path';
 import {validateData,COMMIT} from '../src/model.mjs';
 import {validateGate} from '../src/presentation.mjs';
 import {validateData as validateOxygen,validateGate as oxygenGate,approved} from '../src/oxygen-model.mjs';
+import {preparePericardial} from './prepare-pericardial.mjs';
 import {prepareRespiratory} from './prepare-respiratory.mjs';
 const web=resolve(dirname(fileURLToPath(import.meta.url)),'..'),root=resolve(web,'..');
 const read=async p=>JSON.parse(await readFile(resolve(root,p),'utf8'));
@@ -44,6 +45,7 @@ for(const file of ['manifest.json','checks.json','review.json','lesson-data.json
 await writeFile(resolve(web,'public/evidence/oxygen/build-provenance.json'),JSON.stringify({approved,files:oxygenFiles},null,2)+'\n');
 console.log('Oxygen: fixed reviewed gate, schema and eight public recording artifacts verified.');
 await prepareRespiratory(root,web);
+await preparePericardial(root,web);
 
 for(const file of await (await import('node:fs/promises')).readdir(resolve(root,'licenses')))await copyFile(resolve(root,'licenses',file),resolve(web,'public/licenses',file));
 await copyFile(resolve(root,'LICENSE'),resolve(web,'public/licenses/Glassbox-LICENSE'));
