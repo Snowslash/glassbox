@@ -4,7 +4,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node --test tests/*.test.mjs",
+    "test": "node --test --test-concurrency=1 tests/*.test.mjs",
+    "test:browser": "node tests/browser/build-fixture.mjs && node --test --test-concurrency=1 tests/browser/*.test.mjs",
+    "verify:build": "node scripts/verify-build.mjs",
+    "check": "npm test && npm run build && npm run test:browser",
     "build": "node scripts/prepare.mjs && vite build && node scripts/verify-build.mjs",
     "preview": "vite preview --host 127.0.0.1 --port 4173 --strictPort"
   },

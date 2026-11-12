@@ -1,7 +1,9 @@
 import React, {useEffect, useState, useRef} from 'react';
 import {ProjectNavigation} from './ProjectNavigation.jsx';
 import {PublicEstateHeader, EstateShell, EstatePageTitle, useEstateTheme} from '@sangeev/estate-ui';
-import {validateData, initialState, transition, selectFrame} from './model.mjs';
+import {initialState, transition, selectFrame} from './model.mjs';
+import {readVerifiedBundle} from './verified-bundle.mjs';
+import {pressureBundle} from './pressure-bundle.mjs';
 import {formatValue} from './presentation.mjs';
 import {Traces} from './Traces.jsx';
 import {ModelDetails} from './ModelDetails.jsx';
@@ -39,10 +41,13 @@ export function App() {
  useEffect(() => {
   const controller = new AbortController();
   setError(''); setData(null);
-  fetch('../evidence/lesson-data.json', {signal:controller.signal, cache:'no-cache'})
-   .then(r => {if (!r.ok) throw Error(`Data request failed (${r.status}).`); return r.json();})
-   .then(validateData).then(recording=>{setData(recording);if(isModelPath(window.location.pathname))setModelState(readModelState(window.location.search,recording));})
-   .catch(e => {if (e.name !== 'AbortError') setError(e.message);});
+  readVerifiedBundle(pressureBundle, {signal:controller.signal})
+   .then(recording => {
+    if (controller.signal.aborted) return;
+    setData(recording);
+    if(isModelPath(window.location.pathname))setModelState(readModelState(window.location.search,recording));
+   })
+   .catch(e => {if (!controller.signal.aborted && e.name !== 'AbortError') setError(e.message);});
   return () => controller.abort();
  }, [attempt]);
  return <>

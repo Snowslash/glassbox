@@ -1,7 +1,9 @@
 import React,{useEffect,useState} from 'react';
 import {ProjectNavigation} from './ProjectNavigation.jsx';
 import {PublicEstateHeader,EstateShell,EstatePageTitle,useEstateTheme} from '@sangeev/estate-ui';
-import {validateData,validateGate,approved,initialState,transition,selectFrame,fields,labels,units,display,figure,geometry,linePath,readRoute,modelHref} from './oxygen-model.mjs';
+import {initialState,transition,selectFrame,fields,labels,units,display,figure,geometry,linePath,readRoute,modelHref} from './oxygen-model.mjs';
+import {readVerifiedBundle} from './verified-bundle.mjs';
+import {oxygenBundle} from './oxygen-bundle.mjs';
 import {sha256} from './oxygen-sha256.mjs';
 import {isModelRoute} from './model-route.mjs';
 const stages=['Predict','Watch','Look closer','Compare','Explain'];
@@ -12,10 +14,14 @@ export function OxygenApp(){
  const sync=()=>{setState(s=>({...s,playing:false}));setModel(technical());setSnapshot(readRoute(location.search));};
  useEffect(()=>{window.addEventListener('popstate',sync);return()=>window.removeEventListener('popstate',sync);},[]);
  useEffect(()=>{document.title=(model?'Oxygen model details':'Saturation is not delivery')+' · Glassbox';document.querySelector('h1')?.focus();},[model]);
- useEffect(()=>{const controller=new AbortController();setError('');setData(null);(async()=>{
- const bundle={};for(const name of ['manifest','checks','review','lesson-data']){const response=await fetch('../evidence/oxygen/'+name+'.json',{signal:controller.signal,cache:'no-cache'});if(!response.ok)throw Error('Data request failed ('+response.status+').');const bytes=new Uint8Array(await response.arrayBuffer());bundle[name]={hash:sha256(bytes),value:JSON.parse(new TextDecoder().decode(bytes))};}
- validateGate(bundle.checks.value,bundle.review.value,{manifest:bundle.manifest.hash,checks:bundle.checks.hash,lesson:bundle['lesson-data'].hash});setData(validateData(bundle['lesson-data'].value));
- })().catch(e=>{if(e.name!=='AbortError')setError(e.message);});return()=>controller.abort();},[attempt]);
+ useEffect(() => {
+  const controller = new AbortController();
+  setError(''); setData(null);
+  readVerifiedBundle(oxygenBundle, {signal:controller.signal, hash:sha256})
+   .then(recording => {if (!controller.signal.aborted) setData(recording);})
+   .catch(e => {if (!controller.signal.aborted && e.name !== 'AbortError') setError(e.message);});
+  return () => controller.abort();
+ }, [attempt]);
  useEffect(()=>{if(!state.playing||model||!data)return;const t=setInterval(()=>dispatch({type:'tick'}),1000/state.speed);return()=>clearInterval(t);},[state.playing,state.speed,model,data]);
  useEffect(()=>{const pause=()=>{if(document.hidden)setState(s=>({...s,playing:false}));};document.addEventListener('visibilitychange',pause);return()=>document.removeEventListener('visibilitychange',pause);},[]);
  const follow=(e,href)=>{if(e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;e.preventDefault();history.pushState(null,'',href);sync();scrollTo(0,0);};

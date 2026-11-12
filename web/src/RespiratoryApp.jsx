@@ -2,7 +2,9 @@ import React,{useEffect,useState} from 'react';
 import {ProjectNavigation} from './ProjectNavigation.jsx';
 import {PublicEstateHeader,EstateShell,EstatePageTitle,useEstateTheme} from '@sangeev/estate-ui';
 import {sha256} from './oxygen-sha256.mjs';
-import {branches,labels,columns,approved,validateGate,validateData,initialState,transition,displayIndex,showOutcome,breathRange,axes,geometry,filling,readRoute,modelHref} from './respiratory-model.mjs';
+import {branches,labels,columns,approved,initialState,transition,displayIndex,showOutcome,breathRange,axes,geometry,filling,readRoute,modelHref} from './respiratory-model.mjs';
+import {readVerifiedBundle} from './verified-bundle.mjs';
+import {respiratoryBundle} from './respiratory-bundle.mjs';
 import {isModelRoute} from './model-route.mjs';
 const stages=['Predict','Watch','Look closer','Compare','Explain'];
 const technical=()=>isModelRoute(location.pathname,'respiratory-model');
@@ -12,7 +14,17 @@ export function RespiratoryApp(){
  const sync=()=>{dispatch({type:'pause'});setModel(technical());setSnapshot(readRoute(location.search));};
  useEffect(()=>{window.addEventListener('popstate',sync);return()=>window.removeEventListener('popstate',sync);},[]);
  useEffect(()=>{document.title=(model?'Respiratory model details':'Where does the breath go?')+' · Glassbox';document.querySelector('h1')?.focus({preventScroll:true});},[model]);
- useEffect(()=>{const c=new AbortController();setError('');setData(null);(async()=>{const bundles={},hashes={};for(const [key,file]of Object.entries({manifest:'manifest',checks:'checks',review:'review',fieldMap:'field-map',playback:'playback'})){const response=await fetch('../evidence/respiratory/'+file+'.json',{signal:c.signal,cache:'no-cache'});if(!response.ok)throw Error('Data request failed ('+response.status+').');const bytes=new Uint8Array(await response.arrayBuffer());hashes[key]=sha256(bytes);if(hashes[key]!==approved[key])throw Error('The recording or its approval has changed. Integrity check stopped playback.');bundles[key]=JSON.parse(new TextDecoder().decode(bytes));}validateGate(bundles.checks,bundles.review,hashes);setMapping(bundles.fieldMap);setData(validateData(bundles.playback));})().catch(e=>{if(e.name!=='AbortError')setError(e.message);});return()=>c.abort();},[attempt]);
+ useEffect(() => {
+  const controller = new AbortController();
+  setError(''); setData(null);
+  readVerifiedBundle(respiratoryBundle, {signal:controller.signal, hash:sha256})
+   .then(recording => {
+    if (controller.signal.aborted) return;
+    setMapping(recording.mapping); setData(recording.data);
+   })
+   .catch(e => {if (!controller.signal.aborted && e.name !== 'AbortError') setError(e.message);});
+  return () => controller.abort();
+ }, [attempt]);
  useEffect(()=>{if(!state.playing||model||!data)return;let previous=performance.now(),carry=0;const timer=setInterval(()=>{const now=performance.now();carry+=(now-previous)*state.speed/20;previous=now;const count=Math.floor(carry);if(count){carry-=count;dispatch({type:'tick',count});}},80);return()=>clearInterval(timer);},[state.playing,state.speed,model,data]);
  useEffect(()=>{const pause=()=>{if(document.hidden)dispatch({type:'pause'});};document.addEventListener('visibilitychange',pause);return()=>document.removeEventListener('visibilitychange',pause);},[]);
  const follow=(e,href)=>{if(e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;e.preventDefault();history.pushState(null,'',href);sync();scrollTo(0,0);};

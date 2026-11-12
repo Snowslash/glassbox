@@ -3,7 +3,9 @@ import {PublicEstateHeader,EstateShell,EstatePageTitle,useEstateTheme} from '@sa
 import {ProjectNavigation} from './ProjectNavigation.jsx';
 import {isModelRoute} from './model-route.mjs';
 import {sha256} from './oxygen-sha256.mjs';
-import {branches,labels,approved,validateData,validateGate,initialState,transition,displayIndex,showOutcome,geometry,latestCycle,axes,modelHref,readRoute} from './pericardial-model.mjs';
+import {branches,labels,initialState,transition,displayIndex,showOutcome,geometry,latestCycle,axes,modelHref,readRoute} from './pericardial-model.mjs';
+import {readVerifiedBundle} from './verified-bundle.mjs';
+import {pericardialBundle} from './pericardial-bundle.mjs';
 const stages=['Predict','Watch','Look closer','Compare','Explain'];
 const technical=()=>isModelRoute(location.pathname,'pericardial-model');
 const fmt=n=>n.toFixed(2);
@@ -14,7 +16,14 @@ export function PericardialApp(){
  const sync=()=>{dispatch({type:'pause'});setModel(technical());setSnapshot(readRoute(location.search));};
  useEffect(()=>{window.addEventListener('popstate',sync);return()=>window.removeEventListener('popstate',sync);},[]);
  useEffect(()=>{document.title=(model?'Pericardial model details':'Pressure outside the heart')+' · Glassbox';document.querySelector('h1')?.focus({preventScroll:true});},[model]);
- useEffect(()=>{const controller=new AbortController();let active=true;setError('');setBundle(null);(async()=>{const values={},hashes={};for(const [key,file] of Object.entries({approval:'approval',checks:'checks',lesson:'lesson-data'})){const response=await fetch('../evidence/pericardial/'+file+'.json',{signal:controller.signal,cache:'no-cache'});if(!response.ok)throw Error('Data request failed ('+response.status+').');const bytes=new Uint8Array(await response.arrayBuffer());hashes[key]=sha256(bytes);if(hashes[key]!==approved[key])throw Error('Recording integrity mismatch. Playback stopped.');values[key]=JSON.parse(new TextDecoder().decode(bytes));}validateGate(values.checks,values.approval,hashes);validateData(values.lesson);if(active)setBundle(values);})().catch(e=>{if(active&&e.name!=='AbortError')setError(e.message);});return()=>{active=false;controller.abort();};},[attempt]);
+ useEffect(() => {
+  const controller = new AbortController();
+  setError(''); setBundle(null);
+  readVerifiedBundle(pericardialBundle, {signal:controller.signal, hash:sha256})
+   .then(recording => {if (!controller.signal.aborted) setBundle(recording);})
+   .catch(e => {if (!controller.signal.aborted && e.name !== 'AbortError') setError(e.message);});
+  return () => controller.abort();
+ }, [attempt]);
  useEffect(()=>{if(!state.playing||model||!bundle)return;let previous=performance.now(),carry=0;const timer=setInterval(()=>{const now=performance.now();carry+=(now-previous)*state.speed/20;previous=now;const count=Math.floor(carry);if(count){carry-=count;dispatch({type:'tick',count});}},80);return()=>clearInterval(timer);},[state.playing,state.speed,model,bundle]);
  useEffect(()=>{const pause=()=>{if(document.hidden)dispatch({type:'pause'});};document.addEventListener('visibilitychange',pause);return()=>document.removeEventListener('visibilitychange',pause);},[]);
  const follow=(e,href)=>{if(e.button!==0||e.ctrlKey||e.metaKey||e.altKey||e.shiftKey)return;e.preventDefault();history.pushState(null,'',href);sync();scrollTo(0,0);};
