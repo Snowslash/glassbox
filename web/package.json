@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "playwright": "1.58.0",
-    "vite": "8.1.4"
+    "vite": "8.1.6"
   },
   "description": "Recorded physiological experiments with linked observations and model explanations.",
   "license": "MIT",
